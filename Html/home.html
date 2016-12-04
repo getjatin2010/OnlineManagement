@@ -463,7 +463,7 @@ $scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisp
 
 $scope.getNewValuesForHistory =function()
 {
-
+$scope.found=false;
 $scope.history = [];
 //$scope.history.push($scope.historyBackup[0]);
 if($scope.districtsForDisplay.districtsForDisplaySelected.districtId<=22 && $scope.districtsForDisplay.districtsForDisplaySelected.districtId>=1 )
@@ -475,16 +475,31 @@ if($scope.districtsForDisplay.districtsForDisplaySelected.districtId<=22 && $sco
 	
 		if($scope.historyBackup[key].districtId==$scope.districtsForDisplay.districtsForDisplaySelected.districtId)
 		{		
+			$scope.found=true;
 			$scope.history.push($scope.historyBackup[key]);
 		}		
 	});
 	}
 	else
 	{
+		$scope.found=true;
 		$scope.history = $scope.historyBackup;
 	}
 	
 
+
+if($scope.found==false)
+	{
+	 $mdDialog.show(
+      $mdDialog.alert()
+        .parent(angular.element(document.querySelector('#popupContainer')))
+        .clickOutsideToClose(true)
+        .title('No Completed Transactions for this district')
+        .textContent('')
+        .ariaLabel('Alert')
+        .ok('Got it!')
+    );
+	}
 // $http.post('../UtilityFiles/history.php',$scope.districtsForDisplay.districtsForDisplaySelected).then
 // (
 // function(response) 
@@ -539,7 +554,7 @@ $http.post('../UtilityFiles/getResponse.php',ev).then(
 });
 
 
-app.controller('pendingControl', function($scope,$http) {
+app.controller('pendingControl', function($scope,$http,$mdDialog) {
  
 $http.post('../UtilityFiles/pending.php').then
 (
@@ -564,13 +579,53 @@ $scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisp
 
 $scope.getNewValuesForPending =function()
 {
-$http.post('../UtilityFiles/pending.php',$scope.districtsForDisplay.districtsForDisplaySelected).then
-(
-function(response) 
-{
-$scope.pending = (response.data);
-}
-);
+$scope.found = false;
+$scope.pending = [];
+//$scope.pending.push($scope.pendingBackup[0]);
+if($scope.districtsForDisplay.districtsForDisplaySelected.districtId<=22 && $scope.districtsForDisplay.districtsForDisplaySelected.districtId>=1 )
+	{
+		angular.forEach($scope.pendingBackup, function(value, key){
+		console.log($scope.districtsForDisplay.districtsForDisplaySelected.districtId);
+		console.log($scope.pendingBackup[key].districtId);
+		console.log(key);
+	
+		if($scope.pendingBackup[key].districtId==$scope.districtsForDisplay.districtsForDisplaySelected.districtId)
+		{
+			$scope.found = true;		
+			$scope.pending.push($scope.pendingBackup[key]);
+		}		
+	});
+	}
+	else
+	{
+
+		$scope.found = true;
+		$scope.pending = $scope.pendingBackup;
+	}
+
+	if($scope.found==false)
+	{
+	 $mdDialog.show(
+      $mdDialog.alert()
+        .parent(angular.element(document.querySelector('#popupContainer')))
+        .clickOutsideToClose(true)
+        .title('No Pending Transactions for this district')
+        .textContent('')
+        .ariaLabel('Alert')
+        .ok('Got it!')
+    );
+	}
+	
+
+
+
+// $http.post('../UtilityFiles/pending.php',$scope.districtsForDisplay.districtsForDisplaySelected).then
+// (
+// function(response) 
+// {
+// $scope.pending = (response.data);
+// }
+// );
 }
 
 
