@@ -63,7 +63,7 @@ function adminRecords($sql)
 	$row_array['backgroundColor'] = "#AAFCA3";
 	if($row_array['defective']>0 || $row_array['quantity'] != $row_array['received'] )
 		{	
-		$row_array['backgroundColor'] = "#FFAEAE";
+		$row_array['backgroundColor'] = "#FFFFE0";
 		}
 	
 	}		

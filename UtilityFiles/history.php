@@ -9,7 +9,18 @@ if($var==NULL || $var!=0)
 	header("Location: ../Face/login.php?id=''");
 	exit();	
 }
-$var = getRecords();
+
+$filedata = file_get_contents('php://input',true);
+$arr = json_decode($filedata);
+
+if($arr->districtId>=1 && $arr->districtId <=22)
+{
+$var = getRecordsChoosing($arr->districtId);
+}
+else
+{
+$var = getRecords();	
+}
 echo $var;
 
 
@@ -21,4 +32,14 @@ function getRecords()
 	$response = adminRecords($sql);
 	return $response;
 }
+
+function getRecordsChoosing($value)
+{
+	$userId = $_SESSION['username'];	
+	$sql = "SELECT * FROM transactions where delivered = 1 && districtId = '$value' ORDER BY dateOfRecord DESC";	
+	$response = adminRecords($sql);
+	return $response;
+}
+
+
 ?>

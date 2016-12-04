@@ -1,11 +1,17 @@
 <div ng-controller="pendingControl" ng-cloak layout-gt-sm="row" layout="column">
   <div flex-gt-sm="50" flex>
     
-    <md-toolbar layout="row" class="md-hue-3">
-      
-       <div class="md-toolbar-tools">
+    <md-toolbar layout="row" class="md-hue-3" layout-align ="left center" >
+      &nbsp;	&nbsp;	&nbsp;	&nbsp;
+       <div>
         <span>PENDING TRANSACTIONS</span>
       </div>
+      	&nbsp;	&nbsp;	&nbsp;	&nbsp;
+<div>
+ <md-select ng-model="districtsForDisplay.districtsForDisplaySelected" ng-change="getNewValuesForPending()" >
+ <md-option ng-repeat="districtObject in districtsForDisplay"  ng-value="districtObject">{{districtObject.district}}</md-option>
+</md-select>
+</div>
 
     </md-toolbar>
 

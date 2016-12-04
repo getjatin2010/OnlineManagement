@@ -283,7 +283,6 @@ $scope.assemblies = "";
 
 $scope.loadAssemblies = function()
 {
-console.log($scope.data.districtSelected);
 if($scope.data.districtSelected!=null)
 {
 	$http.post('../UtilityFiles/GetAssembly.php',$scope.data.districtSelected).then(
@@ -328,7 +327,6 @@ $scope.error = "";
 
 $scope.dataRecordSend = function()
 {
-console.log($scope.data.assemblySelected);
 $scope.districtObject = angular.fromJson($scope.data.districtSelected);
 $scope.assemblyObject = angular.fromJson($scope.data.assemblySelected);
 $scope.mediumObject = angular.fromJson($scope.data.mediumSelected);
@@ -405,7 +403,6 @@ $scope.data.sendDate.setHours(12);
 			(
 				function(response) 
 				{
-				console.log(response.data);
 				$mdDialog.hide();
 				$scope.data = "";
 				}
@@ -447,15 +444,40 @@ $http.post('../UtilityFiles/history.php').then
 function(response) 
 {
 $scope.history = (response.data);
+
 }
 
 );
+
+
+
+$http.post('../UtilityFiles/GetOptions.php',$scope.data).then
+(
+function(response)
+{
+$scope.districtsForDisplay = response.data;
+$scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisplay[0];
+console.log($scope.districtsForDisplay.districtsForDisplaySelected);
+}
+);
+
+$scope.getNewValuesForHistory =function()
+{
+$http.post('../UtilityFiles/history.php',$scope.districtsForDisplay.districtsForDisplaySelected).then
+(
+function(response) 
+{
+console.log(response.data);
+$scope.history = (response.data);
+}
+);
+}
+
 
 $scope.showResponse = function(ev) {
 $http.post('../UtilityFiles/getResponse.php',ev).then(
 		function(response) {
 			$scope.received = response.data;
-     			console.log($scope.received);
      			$scope.text = "Response ID : "+$scope.received.responseId+"<br> Received Pieces : "+$scope.received.received+"<br> Defective Pieces : "+$scope.received.defective+"<br>Comments : "+$scope.received.comments+"<br>Date of entry : "+$scope.received.responseId+"\n" ;
     			
 			$mdDialog.show({
@@ -505,7 +527,38 @@ $scope.pending = (response.data);
 }
 
 );
+
+
+$http.post('../UtilityFiles/GetOptions.php',$scope.data).then
+(
+function(response)
+{
+$scope.districtsForDisplay = response.data;
+$scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisplay[0];
+console.log($scope.districtsForDisplay.districtsForDisplaySelected);
+}
+);
+
+
+$scope.getNewValuesForPending =function()
+{
+$http.post('../UtilityFiles/pending.php',$scope.districtsForDisplay.districtsForDisplaySelected).then
+(
+function(response) 
+{
+console.log(response.data);
+$scope.pending = (response.data);
+}
+);
+}
+
+
 });
+
+
+
+
+
 
 app.controller('reportGenControl', function($scope,$http,$mdDialog,$route,$window) {
  $scope.status = '  ';
@@ -559,7 +612,6 @@ $scope.showAlert = function(ev) {
 $scope.data = {};
 $scope.dataReportSend = function()
 		{
-			console.log($scope.data);
 			
 			  if ($scope.data.fromDate > $scope.data.toDate) {
 						$scope.data.error = "Please select select a valid dates";
@@ -586,7 +638,6 @@ $scope.dataReportSend = function()
 			(
 				function(response) 
 				{
-				console.log(response.data);
 				$mdDialog.hide();
 				if($scope.reportNumber == 1)
 				$window.open("../reports/AcceptedEpicSummary.php",'_blank');
