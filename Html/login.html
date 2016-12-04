@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+<script src="http://momentjs.com/downloads/moment.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<head>
+<style>
+
+body{
+margin:0px;
+}
+
+input[type=email],input[type='password'],input[type='text']
+{
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid red;
+    border-radius: 3px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=email]:focus,input[type='password']:focus,input[type='text']:focus {
+  
+    width: 20%	
+}
+
+input.ng-invalid {
+    background-color: #ffeeee;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #424242;
+    text-align: center;
+	font-size:24px;
+}
+
+li a:hover {
+   color: red;
+}
+
+	@media only screen and (max-width:556px){
+			input[type=email]:focus,input[type='password']:focus,input[type='text']:focus 
+			{
+			width:40%;
+			}
+			input[type=email],input[type='password'],input[type='text']
+			{
+			width:25%;
+			}
+		}
+
+
+
+#loginForm {
+    margin-top: 200px;
+}
+
+.button
+{
+  background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button:hover {
+    background-color: #4CAFFF; /* Green */
+    color: white;
+}
+div.heading
+{
+	margin:0px;
+  text-align: center;	
+  background-color: #FFFFFF;
+  background-image:url(../img/symphony.png);
+	background-size:15%;
+	background-attachment:scroll;
+	background-repeat:none;
+	background-position:right;
+  padding: 1px;
+  border-style: solid;
+  border-width: 5px 0px 5px 0px;
+  border-color: #424242;
+ color: #424242;
+ font-family: 'Open Sans', Arial, sans-serif;;
+ font-style:bold;
+}
+}
+
+</style>
+</head>
+
+<body>
+<div class="heading">
+<img src = "../img/logo.png" style = "width:20%;"/>
+<h1>
+EPIC Delivery Tracking System
+</h1>
+<ul>
+  <li><a href="../Html/about.html">About</a></li>
+</ul>
+</div>
+
+
+<div name="myFormDiv" id="loginForm" align="center" height=300px>
+<form name ="myForm" method="post" action="../UtilityFiles/setLoginValues.php">
+
+  <label for="username">Username</label>
+  <input type="text" id="username" name="username">	 
+<br>
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password">
+
+
+<br><br>
+<input type = "submit" id="submitButton" class="button" value="Login">
+</form>
+
+
+</div>
+
+
+
+
+</body>
+
+</html>

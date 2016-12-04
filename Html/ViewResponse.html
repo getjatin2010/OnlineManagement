@@ -1,0 +1,30 @@
+<md-dialog aria-label="ViewResponse" ng-controller="pendingControl">
+<form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Response Against Delivery</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="../Html/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+   <md-dialog-content>
+   <div class="md-dialog-content">
+		 Total sent: {{ pendingResponse.quantity }}</br></br>
+		 Response ID: {{ responseDelivered.responseId }}</br>
+		 Received: {{ responseDelivered.received }}</br>
+		 Defective: {{ responseDelivered.defective }}</br>
+		 Comments: {{ responseDelivered.comments }}</br>
+	</div>
+	
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button class="md-raised md-primary" ng-click = "close_dialog()" md-autofocus>
+       <!--<input type = "submit" id="submitButton" class="button" value="Confirm"/>-->
+	   OK
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

@@ -1,0 +1,54 @@
+<md-content>
+   <div class="holdingForm">
+
+      <form name="recordForm" id="recordForm" ng-submit="dataRecordSend()" method="post" ng-model=formModel class="recordForm">
+         <div layout="column" class="createForm">
+            <p style="color: red">{{error}}</p>
+            <div class="dateHolder">
+               <md-datepicker name="dateField" ng-model="data.sendDate" md-max-date="max_date" md-placeholder="Shipping Date"></md-datepicker>
+            </div>
+
+            <div layout="row">
+               <md-input-container style="margin-right: 10px;">
+                  <label>District</label>
+                  <md-select ng-model="data.districtSelected" md-on-open="emptyAssemblies()">
+                     <md-option ng-repeat="districtObject in districts" value="{{districtObject}}">{{districtObject.district}}</md-option>
+                  </md-select>
+               </md-input-container>
+
+               &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+               <md-input-container style="margin-right: 10px;">
+                  <label>Assembly</label>
+                  <md-select ng-model="data.assemblySelected" md-on-open="loadAssemblies()">
+                     <md-option ng-repeat="assemblyObject in assemblies" value="{{assemblyObject}}">{{assemblyObject.acid}} - {{assemblyObject.ac}}</md-option>
+                  </md-select>
+               </md-input-container>
+            </div>
+            <div layout="row">
+               <md-input-container>
+                  <label>Quantity</label>
+                  <input type="number" name="quantity" ng-model="data.quantity" min="1" />
+               </md-input-container>
+               &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+               <md-input-container>
+                  <label>Medium of Sending</label>
+                  <md-select ng-model="data.mediumSelected" md-on-open="loadSendingOptions()">
+                     <md-option ng-repeat="mediumObject in mediums" value="{{mediumObject}}">{{mediumObject.medium_name}}</md-option>
+                  </md-select>
+               </md-input-container>
+            </div>
+
+            <div>
+               <md-input-container>
+                  <label>Additional Comments</label>
+                  <input ng-model="data.comment">
+               </md-input-container>
+            </div>
+
+            <div class="confirmButton">
+               <input type="submit" id="submitButton" class="button" value="Confirm">
+            </div>
+         </div>
+      </form>
+   </div>
+</md-content>

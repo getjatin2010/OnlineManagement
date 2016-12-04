@@ -1,0 +1,618 @@
+[24-Sep-2016 08:20:01 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 08:20:24 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 08:20:24 UTC] PHP Warning:  include(../reports/GetDistrictList.php): failed to open stream: No such file or directory in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 4
+[24-Sep-2016 08:20:25 UTC] PHP Warning:  include(../reports/GetDistrictList.php): failed to open stream: No such file or directory in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 4
+[24-Sep-2016 08:20:25 UTC] PHP Warning:  include(): Failed opening '../reports/GetDistrictList.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 4
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:20:25 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/adminecartes/public_html/epicharyana/reports/report1.php:135)' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/report1.php(308): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[24-Sep-2016 08:21:05 UTC] PHP Warning:  include(../reports/GetDistrictList.php): failed to open stream: No such file or directory in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 4
+[24-Sep-2016 08:21:05 UTC] PHP Warning:  include(../reports/GetDistrictList.php): failed to open stream: No such file or directory in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 4
+[24-Sep-2016 08:21:05 UTC] PHP Warning:  include(): Failed opening '../reports/GetDistrictList.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 4
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 08:22:26 UTC] PHP Warning:  include(../reports/GetDistrictList.php): failed to open stream: No such file or directory in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 4
+[24-Sep-2016 08:22:26 UTC] PHP Warning:  include(../reports/GetDistrictList.php): failed to open stream: No such file or directory in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 4
+[24-Sep-2016 08:22:26 UTC] PHP Warning:  include(): Failed opening '../reports/GetDistrictList.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 4
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Notice:  Undefined variable: all in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 135
+[24-Sep-2016 08:22:26 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/adminecartes/public_html/epicharyana/reports/report1.php:135)' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/report1.php(308): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[24-Sep-2016 08:29:13 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 08:29:25 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 08:29:25 UTC] PHP Warning:  include(../reports/GetDistrictList.php): failed to open stream: No such file or directory in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 4
+[24-Sep-2016 08:29:25 UTC] PHP Warning:  include(../reports/GetDistrictList.php): failed to open stream: No such file or directory in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 4
+[24-Sep-2016 08:29:25 UTC] PHP Warning:  include(): Failed opening '../reports/GetDistrictList.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/adminecartes/public_html/epicharyana/reports/report1.php on line 4
+[24-Sep-2016 08:29:25 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/report1.php(305): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[24-Sep-2016 08:33:47 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 08:55:25 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 08:55:45 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 08:55:56 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 08:58:40 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 08:59:09 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:04:42 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:05:00 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:05:22 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:05:45 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:06:04 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:10:22 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:10:38 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:11:33 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:23:27 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:23:59 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:24:11 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:28:20 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 09:31:03 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 11:47:50 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 13:32:14 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 17
+[24-Sep-2016 13:32:14 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 18
+[24-Sep-2016 13:32:14 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 49
+[24-Sep-2016 13:32:14 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:32:14 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:32:14 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 50
+[24-Sep-2016 13:32:14 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:32:14 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:32:14 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/notAccepted.php(211): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[24-Sep-2016 13:33:26 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 17
+[24-Sep-2016 13:33:26 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 18
+[24-Sep-2016 13:33:26 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 49
+[24-Sep-2016 13:33:26 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:33:26 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:33:26 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 50
+[24-Sep-2016 13:33:26 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:33:26 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:33:26 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/notAccepted.php(211): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[24-Sep-2016 13:33:27 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 17
+[24-Sep-2016 13:33:27 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 18
+[24-Sep-2016 13:33:27 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 49
+[24-Sep-2016 13:33:27 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:33:27 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:33:27 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 50
+[24-Sep-2016 13:33:27 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:33:27 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:33:27 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/notAccepted.php(211): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[24-Sep-2016 13:33:35 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 17
+[24-Sep-2016 13:33:35 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 18
+[24-Sep-2016 13:33:35 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 49
+[24-Sep-2016 13:33:35 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:33:35 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:33:35 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 50
+[24-Sep-2016 13:33:35 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:33:35 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 71
+[24-Sep-2016 13:33:35 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/notAccepted.php(211): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[24-Sep-2016 13:34:46 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 47
+[24-Sep-2016 13:34:46 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 69
+[24-Sep-2016 13:34:46 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 69
+[24-Sep-2016 13:34:46 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 48
+[24-Sep-2016 13:34:46 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 69
+[24-Sep-2016 13:34:46 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/notAccepted.php on line 69
+[24-Sep-2016 13:34:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/notAccepted.php(209): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[24-Sep-2016 13:35:15 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 13:42:17 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Sep-2016 13:46:50 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[25-Sep-2016 08:36:40 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:36:40 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:36:40 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:36:40 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:36:40 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:36:40 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:36:40 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:36:44 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:36:44 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:36:44 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:36:44 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:36:44 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:36:44 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:36:44 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:36:46 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:36:46 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:36:46 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:36:46 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:36:46 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:36:46 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:36:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:36:58 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[25-Sep-2016 08:38:16 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[25-Sep-2016 08:38:27 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:38:27 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:38:27 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:38:27 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:38:27 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:38:27 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:38:27 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:38:54 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[25-Sep-2016 08:39:16 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[25-Sep-2016 08:39:31 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:39:31 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:39:31 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:39:31 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:39:31 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:39:31 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:39:31 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:39:31 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[25-Sep-2016 08:39:34 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:39:34 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:39:34 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:39:34 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:39:34 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:39:34 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:39:34 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:40:32 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:40:32 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:40:32 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:40:32 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:40:32 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:40:32 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:40:32 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:40:41 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:40:41 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:40:41 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:40:41 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:40:41 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:40:41 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:40:41 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:40:44 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:40:44 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:40:44 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:40:44 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:40:44 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:40:44 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:40:44 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:40:54 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[25-Sep-2016 08:41:36 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:41:36 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:41:36 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:41:36 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:41:36 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:41:36 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:41:36 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:41:44 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[25-Sep-2016 08:42:07 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:42:07 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:42:07 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:42:07 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:42:07 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:42:07 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:42:07 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:43:05 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:43:05 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:43:05 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:43:05 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:43:05 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:43:05 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:43:05 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:45:01 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:45:01 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:45:01 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:45:01 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:45:01 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:45:01 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:45:01 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:45:04 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 08:45:04 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:45:04 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:45:04 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 08:45:04 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:45:04 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 08:45:04 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 08:45:15 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[25-Sep-2016 09:21:46 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 09:21:46 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:21:46 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:21:46 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 09:21:46 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:21:46 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:21:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 09:22:07 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 09:22:07 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:22:07 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:22:07 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 09:22:07 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:22:07 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:22:07 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 09:22:11 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 09:22:11 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:22:11 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:22:11 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 09:22:11 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:22:11 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:22:11 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 09:44:36 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 09:44:36 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:44:36 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:44:36 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 09:44:36 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:44:36 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:44:36 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 09:45:38 UTC] PHP Notice:  Undefined index: startDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 09:45:38 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:45:38 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:45:38 UTC] PHP Notice:  Undefined index: endDate in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 44
+[25-Sep-2016 09:45:38 UTC] PHP Notice:  Undefined offset: 2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:45:38 UTC] PHP Notice:  Undefined offset: 1 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 65
+[25-Sep-2016 09:45:38 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(205): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 09:49:25 UTC] PHP Notice:  Undefined variable: line2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 09:49:25 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(195): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 09:49:36 UTC] PHP Notice:  Undefined variable: line2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 09:49:36 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(195): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 09:49:46 UTC] PHP Notice:  Undefined variable: line2 in /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php on line 43
+[25-Sep-2016 09:49:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file' in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/adminecartes/public_html/epicharyana/reports/EpicsUnderTransition.php(195): FPDF->Output()
+#3 {main}
+  thrown in /home/adminecartes/public_html/epicharyana/fpdf181/fpdf.php on line 271
+[25-Sep-2016 09:51:38 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[25-Sep-2016 12:05:44 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[25-Sep-2016 17:27:04 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[25-Sep-2016 17:32:41 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[26-Sep-2016 06:14:07 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[26-Sep-2016 06:14:47 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[26-Sep-2016 07:13:19 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[26-Sep-2016 07:13:42 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[26-Sep-2016 08:26:33 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[13-Oct-2016 10:08:03 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[13-Oct-2016 10:08:52 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[13-Oct-2016 10:53:48 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[19-Oct-2016 04:58:04 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[24-Oct-2016 16:17:40 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[14-Nov-2016 09:51:41 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[14-Nov-2016 09:51:42 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[14-Nov-2016 09:52:05 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[14-Nov-2016 09:52:21 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[14-Nov-2016 09:52:23 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[14-Nov-2016 16:48:15 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[16-Nov-2016 05:51:06 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[16-Nov-2016 17:10:05 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20
+[16-Nov-2016 17:15:59 UTC] PHP Notice:  Undefined property: stdClass::$mobile in /home/adminecartes/public_html/epicharyana/reports/createReport.php on line 20

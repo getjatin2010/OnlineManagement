@@ -1,0 +1,36 @@
+<form ng-controller="reportGenControl" ng-cloak name = "reportForm" id="reportForm" method="post" ng-model=formModel>
+<md-dialog aria-label="ResponseForm">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>DISPATCH DETAILS</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="../Html/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+   <md-dialog-content>
+   <div class="md-dialog-content">
+		<div>
+		<span flex></span>
+                 <div class="dateHolder">
+					<md-datepicker name="dateField" ng-model="data.fromDate" md-max-date="max_date" md-placeholder="Start Date"></md-datepicker>
+				</div>
+			 <br>
+                 <div class="dateHolder">
+					<md-datepicker name="dateField" ng-model="data.toDate" md-max-date="max_date" md-placeholder="End Date"></md-datepicker>
+				</div>
+		</div>
+		<p style="color: red">{{data.error}}</p>
+	</div>
+	
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button class="md-raised md-primary" ng-click = "dataReportSend()" md-autofocus>
+       <!--<input type = "submit" id="submitButton" class="button" value="Confirm"/>-->
+	   SUBMIT
+      </md-button>
+    </md-dialog-actions>
+</md-dialog>
+</form>

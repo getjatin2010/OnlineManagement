@@ -1,0 +1,47 @@
+<form ng-controller="pendingControl" ng-cloak name = "recordForm" id="recordForm" method="post" ng-model=formModel>
+<md-dialog aria-label="ResponseForm">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Receive Epics</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="../Html/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+   <md-dialog-content>
+   <div class="md-dialog-content">
+   <b>Total EPICS sent: {{ pendingResponse.quantity }}</b></br></br>
+   
+		<div layout = "row">
+			<md-input-container>
+                <label>Epics Received</label>
+                <input type="number" ng-model="data.response_quant_received">
+            </md-input-container>
+			 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+            <md-input-container>
+				 <label>Defective epics</label>
+				 <input type="number" ng-model="data.response_quant_defective">
+            </md-input-container>
+		</div>
+            <md-input-container>
+                <label>Remarks</label>
+                <input type="text" ng-model="data.response_comments">
+            </md-input-container>
+	</br><b>Total correct epics received: {{ data.response_quant_received - data.response_quant_defective }}</b>
+	<p style = "color: red;">{{ pendingResponse.error }}</p>
+	</div>
+
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+		<md-checkbox ng-model="data.isDelivered" ng-click = "checkboxFunc()" aria-label="Checkbox 1">
+            Order Delivered
+        </md-checkbox>
+      <span flex></span>
+      <md-button class="md-raised md-primary" ng-disabled="!data.isDelivered" ng-click = "dataResponseSend()" md-autofocus>
+       <!--<input type = "submit" id="submitButton" class="button" value="Confirm"/>-->
+	   SUBMIT
+      </md-button>
+    </md-dialog-actions>
+</md-dialog>
+</form>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<head>
+<style>
+
+.md-3-line
+{
+border-bottom: 6pt double white;
+}
+
+
+.md-list-item-text button 
+{
+  width: 200px; 
+}
+
+@media only screen and (max-width:556px){
+			md-dialog {
+				position:absolute;
+				top:10%;
+				left:10%;
+			}
+		}
+
+
+.md-list-item-text
+{
+width : 100%;
+padding-left : 30px;
+padding-bottom : 10px;
+}
+.datepickerdemoBasicUsage {
+  /** Demo styles for mdCalendar. */ }
+  .datepickerdemoBasicUsage md-content {
+    padding-bottom: 200px; }
+  .datepickerdemoBasicUsage .validation-messages {
+    font-size: 12px;
+    color: #dd2c00;
+    margin: 10px 0 0 25px; }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color:#000000;
+    background-color: #FFFFFF;
+}
+
+li {
+    float: left;
+   
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+li a:hover {
+    color: #9076F6;
+}
+
+
+input[type=date],input[type='text']
+{
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+
+.responseClass{
+	color: #0000ff;
+}
+
+#recordForm {
+    margin-top: 150px;
+
+}
+
+.button
+{
+  background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button:hover {
+    background-color: #4AAFFF; /* Green */
+    color: white;
+}
+
+
+form.recordForm {
+	margin:auto;
+	width: 40%;
+	padding: 10px;
+	background-color: lightyellow;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #9076F6;
+        border-radius: 25px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+div.heading
+{
+  text-align: center;	
+  background-color: #FFFFFF;
+  background-image:url(../img/symphony.png);
+	background-size:15%;
+	background-attachment:scroll;
+	background-repeat:none;
+	background-position:right;
+  padding: 1px;
+  border-style: solid;
+  border-width: 5px 0px 5px 0px;
+  border-color: #424242;
+ color: #424242;
+ font-family: 'Open Sans', Arial, sans-serif;;
+ font-style:bold;
+}
+body
+{
+background-color:#FFFFFF;
+}
+div.holdingForm
+{
+    margin-top: -2cm;	
+    margin-bottom:30px;
+}
+div.dateHolder
+{
+   text-align: right;	
+}
+
+div.confirmButton
+{
+ text-align: center;	
+}
+
+div.data
+{
+  color: #FFFFFF;	
+}
+
+.class_li
+{
+ color:black;
+}
+</style>
+</head>
+<body ng-app = "homeMainApp">
+<div class="heading" layout = "row">
+<img src = "../img/logo.png" style = "width:20%;"/>
+<h1>
+EPIC Delivery Tracking System
+</h1>
+</div>
+<ul>
+  <li><a href="#pending">Records</a></li>
+  <li style="float:right"><a href="../UtilityFiles/logout.php">Logout</a></li>
+</ul>
+<div ng-view class="data" ></div>
+
+<script>
+var app = angular.module("homeMainApp",["ngRoute","ngMaterial"]);
+app.config(
+function($routeProvider)
+{
+ $routeProvider
+    .when("/about", {
+        templateUrl : "../Html/about.html"
+    })
+    .when("/pending", {
+        templateUrl : "../Html/pending_non_admin.html", controller: "pendingControl"
+    });
+});
+
+
+
+
+
+
+app.controller('pendingControl', function($scope,$http,$mdDialog,$route) {
+ 
+$http.post('../UtilityFiles/records.php').then
+(
+function(response) 
+{
+console.log(response.data);
+$scope.pending = (response.data);
+}
+
+);
+
+//------
+   $scope.status = '  ';
+   $scope.customFullscreen = false;
+   $scope.showAdvanced = function(ev) {
+    console.log(ev);
+	
+		$http.post('../UtilityFiles/getResponse.php',ev).then
+		(
+		function(response) 
+		{
+		console.log(response.data);
+		$scope.responseDelivered = (response.data);
+		}
+		);
+   $scope.pendingResponse = ev;
+	if (ev.deliveryCode == 0)
+	{
+    $mdDialog.show({
+      controller: DialogController,
+	  scope: $scope,
+	  preserveScope: true,
+      templateUrl: '../Html/ResponseForm.html',
+      parent: angular.element(document.body),
+      clickOutsideToClose:true,
+      fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+    })
+    .then(function(answer) {
+      $scope.status = 'You said the information was "' + answer + '".';
+    }, function() {
+      $scope.status = 'You cancelled the dialog.';
+    });
+	}
+  };
+  
+ function DialogController($scope, $mdDialog,$route) {
+    $scope.hide = function() {
+      $mdDialog.hide();
+    };
+    $scope.cancel = function() {
+      $mdDialog.cancel();
+    };
+    $scope.answer = function(answer) {
+      $mdDialog.hide(answer);
+    };
+  }
+  
+$scope.data = {};
+$scope.dataResponseSend = function()
+{
+$scope.data.recordId = $scope.pendingResponse.recordId;
+console.log($scope.data);
+
+
+
+if($scope.data.response_quant_defective=="" || $scope.data.response_quant_defective == null )
+{
+ $scope.data.response_quant_defective = 0;
+}
+
+
+if($scope.data.response_quant_received<0 || $scope.data.response_quant_received == null )
+{
+	$scope.pendingResponse.error = "Enter valid value for received units!";
+}
+else if($scope.data.response_quant_defective<0 || $scope.data.response_quant_defective == null )
+{
+ 	$scope.pendingResponse.error = "Enter valid value for defective units!";
+}
+else if ($scope.data.response_quant_received > $scope.pendingResponse.quantity)
+{
+	$scope.pendingResponse.error = "Enter valid value for received units!";
+}
+else if($scope.data.response_quant_defective > $scope.pendingResponse.quantity)
+{
+	$scope.pendingResponse.error = "Enter valid value for defective units!";
+}
+else if($scope.data.response_quant_defective > $scope.data.response_quant_received)
+{
+	$scope.pendingResponse.error = "Enter valid values!";
+}
+else
+{
+
+
+
+
+$mdDialog.show({
+	clickOutsideToClose: true,
+	scope: $scope,        // use parent scope in template
+	preserveScope: true,  // do not forget this if use parent scope
+	// Since GreetingController is instantiated with ControllerAs syntax
+	// AND we are passing the parent '$scope' to the dialog, we MUST
+	// use 'vm.<xxx>' in the template markup
+	template: '<md-dialog layout-padding>' +
+		    '  <md-dialog-content>' +
+		    '<h3>CONFIRM Details</h3>' + 
+		    '<br>Epics Dispatched : {{pendingResponse.quantity}} <br>  ' +
+		    ' <br>Missing Epics : {{pendingResponse.quantity- data.response_quant_received}}<br>  ' +
+		    ' Received Epics : {{data.response_quant_received}} <br>  ' +
+		    ' Defective Epics : {{data.response_quant_defective}}<br>  ' +
+		    ' <br>Correct Epics : {{data.response_quant_received - data.response_quant_defective}}<br> ' +
+		    ' </md-dialog-content>' +
+	            ' <md-dialog-actions>' +
+		    ' <md-button ng-click="closeDialog()" class="md-primary">' +
+		    '      Cancel' +
+		    '    </md-button>' +
+		    '    <md-button ng-click="sendData()" class="md-primary">' +
+		    '      Submit' +
+		    '    </md-button>' +				   
+		    '  </md-dialog-actions>' +
+	 	    '	</md-dialog>',
+	controller: function DialogController($scope, $mdDialog,$http) 
+	{
+		$scope.closeDialog = function() 
+		{
+		$mdDialog.hide();
+		}
+	
+		$scope.sendData = function()
+		{
+			$http.post('../UtilityFiles/RegisterNewResponse.php',$scope.data).then
+			(
+			function(response) 
+			{
+			console.log(response.data);
+			$mdDialog.hide();
+
+			$route.reload();
+			 });
+		}
+	}
+	});
+
+}
+}  
+
+$scope.close_dialog = function()
+{
+	$mdDialog.hide();
+}
+
+$scope.checkboxFunc = function()
+{
+	console.log("INSIDE FUNC!");
+	console.log($scope.data.response_quant_defective);
+	console.log($scope.data.response_quant_received);
+	
+	if($scope.data.response_quant_defective==null)
+	{
+//		$scope.data.response_quant_defective=0;
+	}
+	if($scope.data.response_quant_received==null)
+	{
+//		$scope.data.response_quant_received=parseInt($scope.pendingResponse.quantity);
+	}
+}
+//-------
+});
+
+
+
+</script>
+
+
+</body>
+
+</html>

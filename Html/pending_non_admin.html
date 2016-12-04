@@ -1,0 +1,54 @@
+
+<div ng-controller="pendingControl" ng-cloak layout-gt-sm="row" layout="column">
+  <div flex-gt-sm="50" flex>
+    
+    <md-toolbar layout="row" class="md-hue-3">
+      
+       <div class="md-toolbar-tools">
+        <span>TRANSACTIONS RECORD</span>
+      </div>
+
+    </md-toolbar>
+
+    <md-content>
+     
+     <md-list flex>
+        <md-list-item class="md-3-line" ng-repeat="item in pending" >
+          <div class="md-list-item-text" layout="column" ng-style="{'background-color': item.backgroundColor}">
+	    
+	
+<div ng-if="item.deliveryCode == '0'">
+
+
+	<div class="row">
+		<div class="col-md-3 ">Transaction ID : {{ item.recordId }}<br>District: {{ item.district }}<br>Assembly: {{item.assemblyId}} - {{ item.assembly}}<br>Remarks : {{item.additionalComments}}</div>
+		<div class="col-md-3 ">Transaction Date :  {{ item.dateOfSending }}<br>Epic Delivered : {{ item.quantity }} <br> Deilivery Medium : {{ item.medium_name }}</div>
+		<div class="col-md-3 "> 
+	  <md-button class="md-primary md-raised" ng-click="showAdvanced(item)">RECEIVE EPICS</md-button></div>
+	</div>
+
+
+
+</div>
+
+	<div ng-if="item.deliveryCode == '1'">
+
+
+	<div class="row">
+		<div class="col-md-3 ">Transaction ID : {{ item.recordId }}<br>District: {{ item.district }}<br>Assembly: {{item.assemblyId}} - {{ item.assembly}}<br>Remarks : {{item.additionalComments}}</div>
+		<div class="col-md-3 ">Transaction Date :  {{ item.dateOfSending }}<br>Epic Delivered : {{ item.quantity }} <br> Deilivery Medium : {{ item.medium_name }}</div>
+		<div class="col-md-3 responseClass">Epic  Received : {{ item.received }}<br>Correct Epic : {{item.received -  item.defective }}<br>Defective Epics : {{ item.defective }}<br>Remarks : {{ item.comments }}</div>
+		<div class="col-md-3 responseClass">Missing Epics : {{ item.quantity - item.received }}<br>Received Date : {{ item.time }}</div>
+
+</div>
+        </md-list-item>
+        <md-divider ></md-divider>
+      </md-list>
+
+    </md-content>
+
+  </div>
+</div>
+
+
+
