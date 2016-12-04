@@ -444,6 +444,7 @@ $http.post('../UtilityFiles/history.php').then
 function(response) 
 {
 $scope.history = (response.data);
+$scope.historyBackup = (response.data);
 
 }
 
@@ -457,20 +458,41 @@ function(response)
 {
 $scope.districtsForDisplay = response.data;
 $scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisplay[0];
-console.log($scope.districtsForDisplay.districtsForDisplaySelected);
 }
 );
 
 $scope.getNewValuesForHistory =function()
 {
-$http.post('../UtilityFiles/history.php',$scope.districtsForDisplay.districtsForDisplaySelected).then
-(
-function(response) 
-{
-console.log(response.data);
-$scope.history = (response.data);
-}
-);
+
+$scope.history = [];
+//$scope.history.push($scope.historyBackup[0]);
+if($scope.districtsForDisplay.districtsForDisplaySelected.districtId<=22 && $scope.districtsForDisplay.districtsForDisplaySelected.districtId>=1 )
+	{
+		angular.forEach($scope.historyBackup, function(value, key){
+		console.log($scope.districtsForDisplay.districtsForDisplaySelected.districtId);
+		console.log($scope.historyBackup[key].districtId);
+		console.log(key);
+	
+		if($scope.historyBackup[key].districtId==$scope.districtsForDisplay.districtsForDisplaySelected.districtId)
+		{		
+			$scope.history.push($scope.historyBackup[key]);
+		}		
+	});
+	}
+	else
+	{
+		$scope.history = $scope.historyBackup;
+	}
+	
+
+// $http.post('../UtilityFiles/history.php',$scope.districtsForDisplay.districtsForDisplaySelected).then
+// (
+// function(response) 
+// {
+// console.log(response.data);
+// $scope.history = (response.data);
+// }
+// );
 }
 
 
@@ -524,6 +546,7 @@ $http.post('../UtilityFiles/pending.php').then
 function(response) 
 {
 $scope.pending = (response.data);
+$scope.pendingBackup = (response.data);
 }
 
 );
@@ -535,7 +558,6 @@ function(response)
 {
 $scope.districtsForDisplay = response.data;
 $scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisplay[0];
-console.log($scope.districtsForDisplay.districtsForDisplaySelected);
 }
 );
 
@@ -546,7 +568,6 @@ $http.post('../UtilityFiles/pending.php',$scope.districtsForDisplay.districtsFor
 (
 function(response) 
 {
-console.log(response.data);
 $scope.pending = (response.data);
 }
 );
