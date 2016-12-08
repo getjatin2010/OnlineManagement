@@ -469,9 +469,7 @@ $scope.history = [];
 if($scope.districtsForDisplay.districtsForDisplaySelected.districtId<=22 && $scope.districtsForDisplay.districtsForDisplaySelected.districtId>=1 )
 	{
 		angular.forEach($scope.historyBackup, function(value, key){
-		console.log($scope.districtsForDisplay.districtsForDisplaySelected.districtId);
-		console.log($scope.historyBackup[key].districtId);
-		console.log(key);
+		
 	
 		if($scope.historyBackup[key].districtId==$scope.districtsForDisplay.districtsForDisplaySelected.districtId)
 		{		
@@ -585,9 +583,6 @@ $scope.pending = [];
 if($scope.districtsForDisplay.districtsForDisplaySelected.districtId<=22 && $scope.districtsForDisplay.districtsForDisplaySelected.districtId>=1 )
 	{
 		angular.forEach($scope.pendingBackup, function(value, key){
-		console.log($scope.districtsForDisplay.districtsForDisplaySelected.districtId);
-		console.log($scope.pendingBackup[key].districtId);
-		console.log(key);
 	
 		if($scope.pendingBackup[key].districtId==$scope.districtsForDisplay.districtsForDisplaySelected.districtId)
 		{

@@ -1,8 +1,8 @@
 <?php
 
 $servername = "localhost";
-$username = "root";
-$password = "fasttracK";
+$username = "epicharyana";
+$password = "epicharyana123";
 $dbname = "epicharyanadb";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
