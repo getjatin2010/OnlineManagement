@@ -6,8 +6,11 @@ $var = check_login_func();
 
 if($var==NULL || $var!=0)
 {
-	header("Location: ../Face/login.php?id=''");
-	exit();	
+	$return_arr = array();
+	$return_arr["login"] = "0";
+	$var = json_encode($return_arr);
+	echo $var;
+	return;
 }
 
 
