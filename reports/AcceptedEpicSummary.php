@@ -129,7 +129,7 @@ while ($rowAc = $fetchAc->fetch_assoc()) {
 
 /// geetting transactions that happened
 		include "../DatabaseConnection/config.php";
-		$sql = "SELECT * FROM `transactions` WHERE `delivered` = 1 && `acid` = '".$rowAc['ac_no']."' && `dateOfSending` <= '".$_SESSION['endDate']."' && `dateOfSending` >= '".$_SESSION['startDate']."'";		
+		$sql = "SELECT * FROM `transactions` WHERE `Disabled` = 0 && `delivered` = 1 && `acid` = '".$rowAc['ac_no']."' && `dateOfSending` <= '".$_SESSION['endDate']."' && `dateOfSending` >= '".$_SESSION['startDate']."'";		
 		$fetchtrans = mysqli_query($conn,$sql);
 		mysqli_close($conn);			
 		$total = 0 ;

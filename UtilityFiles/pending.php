@@ -28,7 +28,7 @@ echo $var;
 function getRecords()
 {
 	$userId = $_SESSION['username'];	
-	$sql = "SELECT * FROM transactions where delivered = 0 ORDER BY dateOfRecord DESC";	
+	$sql = "SELECT * FROM transactions where delivered = 0 && Disabled = 0 ORDER BY dateOfRecord DESC";	
 	$response = adminRecords($sql);
 	return $response;
 }
@@ -37,7 +37,7 @@ function getRecords()
 function getRecordsChoosing($value)
 {
 	$userId = $_SESSION['username'];	
-	$sql = "SELECT * FROM transactions where delivered = 0 && districtId = '$value' ORDER BY dateOfRecord DESC";	
+	$sql = "SELECT * FROM transactions where delivered = 0 && districtId = '$value' && Disabled = 0  ORDER BY dateOfRecord DESC";	
 	$response = adminRecords($sql);
 	return $response;
 }

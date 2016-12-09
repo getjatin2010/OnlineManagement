@@ -1,20 +1,20 @@
-<div ng-controller="pendingControl" ng-cloak layout-gt-sm="row" layout="column">
+<div ng-controller="trashControl" ng-cloak layout-gt-sm="row" layout="column">
   <div flex-gt-sm="50" flex>
     <md-toolbar layout="row" class="md-hue-3" layout-align ="left center" >
       &nbsp;	&nbsp;	&nbsp;	&nbsp;
       <div>
-        <span>PENDING TRANSACTIONS</span>
+        <span>TRASH</span>
       </div>
       &nbsp;	&nbsp;	&nbsp;	&nbsp;
       <div>
-        <md-select ng-model="districtsForDisplay.districtsForDisplaySelected" ng-change="getNewValuesForPending()" >
+        <md-select ng-model="districtsForDisplay.districtsForDisplaySelected" ng-change="getNewValuesForTrash()" >
           <md-option ng-repeat="districtObject in districtsForDisplay"  ng-value="districtObject">{{districtObject.district}}</md-option>
         </md-select>
       </div>
     </md-toolbar>
     <md-content>
       <md-list flex>
-        <md-list-item class="md-3-line" ng-repeat="item in pending" >
+        <md-list-item class="md-3-line" ng-repeat="item in trash" >
           <div class="md-list-item-text" layout="column" ng-style="{'background-color': item.backgroundColor}">
             <div ng-if="item.deliveryCode == '0'">
               <div class="row">
@@ -28,8 +28,8 @@
                   <br> Deilivery Medium : {{ item.medium_name }}
                 </div>
                 <div class="col-md-3 "></div>
-                <div >
-                  <md-button class="md-primary md-raised" ng-click="disableTransaction(item)" flex="15">MOVE TO TRASH</md-button>
+                <div ng-if="item.disable == '0'">
+                  <md-button class="md-primary md-raised" ng-click="disableTransaction(item)">DISABLE TRANSACTION</md-button>
                 </div>
               </div>
             </div>

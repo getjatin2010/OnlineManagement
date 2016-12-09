@@ -6,9 +6,10 @@ include('../UtilityFiles/getAdminRecords.php');
 $var = check_login_func();
 if($var==NULL || $var!=0)
 {
-	header("Location: ../Face/login.php?id=''");
+	header("Location: ../Face/login.php?id=''");	
 	exit();	
 }
+
 
 $filedata = file_get_contents('php://input',true);
 $arr = json_decode($filedata);
@@ -26,20 +27,21 @@ echo $var;
 
 function getRecords()
 {
-	$userId = $_SESSION['username'];
-	$sql = "SELECT * FROM transactions WHERE delivered = 1 && Disabled = 0 ORDER BY dateOfRecord DESC";	
-	//$sql = "SELECT * FROM transactions where delivered = 0 ORDER BY dateOfRecord DESC";	
+	$userId = $_SESSION['username'];	
+	$sql = "SELECT * FROM transactions where Disabled = 1  ORDER BY dateOfRecord DESC";	
 	$response = adminRecords($sql);
 	return $response;
 }
+
 
 function getRecordsChoosing($value)
 {
 	$userId = $_SESSION['username'];	
-	$sql = "SELECT * FROM transactions where delivered = 1 && districtId = '$value' && Disabled = 0 ORDER BY dateOfRecord DESC";	
+	$sql = "SELECT * FROM transactions where districtId = '$value' && Disabled = 1  ORDER BY dateOfRecord DESC";	
 	$response = adminRecords($sql);
 	return $response;
 }
 
-
 ?>
+
+

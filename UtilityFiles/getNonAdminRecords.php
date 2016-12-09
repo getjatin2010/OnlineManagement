@@ -12,7 +12,7 @@ function adminRecords($sql)
 		$districtId = $row['districtId'];
 		$acId = $row['acid'];
 		$mediumId = $row['mediumId']; 
-		$disabled = $row['Disabled'];
+		
 		$sqlmedium = "SELECT * FROM mediumofsending where  medium_id = '".$mediumId."'";
 		$fetchmedium = mysqli_query($conn,$sqlmedium); 			
 		$rowmedium = $fetchmedium->fetch_assoc();
@@ -65,20 +65,13 @@ function adminRecords($sql)
 		{	
 		$row_array['backgroundColor'] = "#FFFFE0";
 		}
+	
 	}		
 	else
 	{
-		if($disabled=='1')
-		{
-			$row_array['disable'] = '1';
-			$row_array['backgroundColor'] = "#D3D3D3";	
-		}
-		else
-		{
-		$row_array['disable'] = '0';	
-		$row_array['delivered'] = "RECEIVE EPIC";
-		$row_array['backgroundColor'] = "#FFAEAE";
-		}
+	$row_array['disableButton'] = 'true';	
+	$row_array['delivered'] = "RECEIVE EPIC";
+	$row_array['backgroundColor'] = "#FFAEAE";
 	}
 
 	    $row_array['mobileNumberSender'] = $row['mobileNumberSender'];	

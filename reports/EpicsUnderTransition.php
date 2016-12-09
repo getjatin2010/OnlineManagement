@@ -100,7 +100,7 @@ while ($rowAc = $fetchAc->fetch_assoc()) {
 
 /// geetting transactions that happened
 		include "../DatabaseConnection/config.php";
-		$sql = "SELECT * FROM `transactions` WHERE `delivered` = 0 && `acid` = '".$rowAc['ac_no']."'";		
+		$sql = "SELECT * FROM `transactions` WHERE `Disabled` = 0 && `delivered` = 0 && `acid` = '".$rowAc['ac_no']."'";		
 		$fetchtrans = mysqli_query($conn,$sql);
 		mysqli_close($conn);			
 		$total = 0 ;
