@@ -184,6 +184,7 @@ EPIC Delivery Tracking System
 </div>
 <ul>
   <li><a href="#pending">Records</a></li>
+  <li><a href="#reports">Reports</a></li>
   <li style="float:right"><a href="../UtilityFiles/logout.php">Logout</a></li>
 </ul>
 <div ng-view class="data" ></div>
@@ -199,12 +200,24 @@ function($routeProvider)
     })
     .when("/pending", {
         templateUrl : "../Html/pending_non_admin.html", controller: "pendingControl"
-    });
+    })
+    .when("/reports", {
+        templateUrl : "../Html/reports_non_admin.html"
+          });
 });
 
 
+  app.controller('reportGenControl', function($scope,$http,$mdDialog,$route,$window) {
+       $scope.status = '  ';
+         $scope.customFullscreen = false;
 
-
+         $scope.reportAction = function($reportNumber) {
+      	 $scope.reportNumber = $reportNumber;
+      	 		console.log("clicked");
+      			$window.open("../reports/createNonAdminReport.php",'_blank');
+      			return;
+      	};
+      });
 
 
 app.controller('pendingControl', function($scope,$http,$mdDialog,$route) {

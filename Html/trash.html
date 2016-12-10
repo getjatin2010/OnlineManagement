@@ -27,11 +27,10 @@
                   <br>Epic Delivered : {{ item.quantity }} 
                   <br> Deilivery Medium : {{ item.medium_name }}
                 </div>
-                <div class="col-md-3 "></div>
-                <div ng-if="item.disable == '0'">
-                  <md-button class="md-primary md-raised" ng-click="disableTransaction(item)">DISABLE TRANSACTION</md-button>
+               <div class="col-md-3 "></div>
+                <div >
+                  <md-button class="md-primary md-raised" ng-click="enableTransaction(item)" flex="15">RESTORE</md-button>
                 </div>
-              </div>
             </div>
           </div>
           <div ng-if="item.deliveryCode == '1'">

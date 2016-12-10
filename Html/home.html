@@ -224,7 +224,7 @@
       });
       
       
-      app.controller('recordController',function($scope,$http,$mdDialog)
+      app.controller('recordController',function($scope,$http,$mdDialog,$window)
       {
       $scope.max_date = new Date();
       
@@ -233,7 +233,15 @@
       (
       function(response)
       {
-      $scope.districts = response.data;
+      if(response.data.login==0)
+        {
+        $window.alert("Please Login");
+        $window.location.href = '../Face/login.php';
+        }
+      else
+        {
+              $scope.districts = response.data;
+        }  
       }
       
       );
@@ -395,7 +403,7 @@
         return check;
       };
       
-      app.controller('historyControl', function($scope,$http,$mdDialog) {
+      app.controller('historyControl', function($scope,$http,$mdDialog,$window) {
       
       
       
@@ -405,9 +413,16 @@
       (
       function(response) 
       {
-      $scope.history = (response.data);
-      $scope.historyBackup = (response.data);
-      
+        if(response.data.login==0)
+      {
+        $window.alert("Please Login");
+        $window.location.href = '../Face/login.php';
+      }
+      else
+      {
+        $scope.history = (response.data);
+        $scope.historyBackup = (response.data);
+      }
       }
       
       );
@@ -514,14 +529,29 @@
       });
       
       
-      app.controller('pendingControl', function($scope,$http,$mdDialog,$route) {
+      app.controller('pendingControl', function($scope,$http,$mdDialog,$route,$window) {
        
       $http.post('../UtilityFiles/pending.php').then
       (
       function(response) 
       {
-      $scope.pending = (response.data);
-      $scope.pendingBackup = (response.data);
+        console.log(response.data);
+      if(response.data.login==0)
+        {
+        $window.alert("Please Login");
+        $window.location.href = '../Face/login.php';
+        }
+      else
+      {
+        $scope.pending = (response.data);
+        $scope.pendingBackup = (response.data);
+        $scope.pendingSum = 0;
+        angular.forEach($scope.pendingBackup, function(value, key){
+        
+            $scope.pendingSum =   parseInt($scope.pendingBackup[key].quantity, 10) +  $scope.pendingSum ;
+        });
+
+      }
       }
       
       );
@@ -554,7 +584,6 @@
           // Appending dialog to document.body to cover sidenav in docs app
           var confirm = $mdDialog.confirm()
                 .title('Are you sure, you want to disable the transaction?')
-                .textContent('You wont be able to reverse the action')
                 .ariaLabel('DISABLE TRANSACTION')
                 .ok('YES')
                 .cancel('NO');
@@ -598,13 +627,18 @@
       //$scope.pending.push($scope.pendingBackup[0]);
       if($scope.districtsForDisplay.districtsForDisplaySelected.districtId<=22 && $scope.districtsForDisplay.districtsForDisplaySelected.districtId>=1 )
       	{
+
+
+          $scope.pendingSum = 0;
+
       		angular.forEach($scope.pendingBackup, function(value, key){
-      	
       		if($scope.pendingBackup[key].districtId==$scope.districtsForDisplay.districtsForDisplaySelected.districtId)
       		{
       			$scope.found = true;		
       			$scope.pending.push($scope.pendingBackup[key]);
-      		}		
+            $scope.pendingSum =   parseInt($scope.pendingBackup[key].quantity, 10) +  $scope.pendingSum ;
+      		}
+
       	});
       	}
       	else
@@ -643,14 +677,22 @@
       });
       
       
-      app.controller('trashControl', function($scope,$http,$mdDialog,$route) {
+      app.controller('trashControl', function($scope,$http,$mdDialog,$route,$window) {
        
       $http.post('../UtilityFiles/trash.php').then
       (
       function(response) 
       {
-      $scope.trash = (response.data);
-      $scope.trashBackup = (response.data);
+         if(response.data.login==0)
+        {
+        $window.alert("Please Login");
+        $window.location.href = '../Face/login.php';
+        }
+        else
+        {
+        $scope.trash = (response.data);
+        $scope.trashBackup = (response.data);    
+        }
       }
       
       );
@@ -679,33 +721,44 @@
       
       
       
-      $scope.disableTransaction = function(ev) {
-          // Aptrash dialog to document.body to cover sidenav in docs app
+      
+      $scope.enableTransaction = function(ev) {
+          // Appending dialog to document.body to cover sidenav in docs app
           var confirm = $mdDialog.confirm()
-                .title('Are you sure, you want to disable the transaction?')
-                .textContent('You wont be able to reverse the action')
+                .title('Are you sure, you want to enable the transaction?')
                 .ariaLabel('DISABLE TRANSACTION')
                 .ok('YES')
                 .cancel('NO');
       
           $mdDialog.show(confirm).then(function() {
             $scope.status = 'You have disabled.';
-             $http.post('../UtilityFiles/MakeTrash.php',ev).then
-      		(
-      		function(response) 
-      		{
-      			if(response.data.trashed==1)
-      			{
-      				console.log("done");
-      			}
-      			$route.reload();
-      		}
-      		);	
+             $http.post('../UtilityFiles/EnableTrash.php',ev).then
+          (
+          function(response) 
+          {
+            if(response.data.trashed==1)
+            {
+              $route.reload();
+            }
+            else
+            {
+               $mdDialog.show(
+            $mdDialog.alert()
+              .parent(angular.element(document.querySelector('#popupContainer')))
+              .clickOutsideToClose(true)
+              .title('Some error Occured')
+              .textContent('')
+              .ariaLabel('Alert')
+              .ok('Got it!')
+          );
+            }
+            
+          }
+          );  
           }, function() {
             $scope.status = 'You have not disabled';
           });
         };
-      
       
       
       $scope.getNewValuesForTrash =function()
@@ -765,7 +818,7 @@
        $scope.status = '  ';
          $scope.customFullscreen = false;
          $scope.reportAction = function($reportNumber) {
-      	$scope.reportNumber = $reportNumber;
+      	 $scope.reportNumber = $reportNumber;
       		if($reportNumber==2)
       		{
       			$window.open("../reports/EpicsUnderTransition.php",'_blank');
