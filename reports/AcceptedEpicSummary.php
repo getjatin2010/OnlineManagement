@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(E_ERROR | E_PARSE);
 require('../fpdf181/fpdf.php');
 include('../UtilityFiles/checkLogin.php');
 

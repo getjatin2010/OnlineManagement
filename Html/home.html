@@ -646,6 +646,11 @@
       
       		$scope.found = true;
       		$scope.pending = $scope.pendingBackup;
+      		   $scope.pendingSum = 0;
+        angular.forEach($scope.pendingBackup, function(value, key){
+        
+            $scope.pendingSum =   parseInt($scope.pendingBackup[key].quantity, 10) +  $scope.pendingSum ;
+        });
       	}
       
       	if($scope.found==false)
@@ -726,7 +731,7 @@
           // Appending dialog to document.body to cover sidenav in docs app
           var confirm = $mdDialog.confirm()
                 .title('Are you sure, you want to enable the transaction?')
-                .ariaLabel('DISABLE TRANSACTION')
+                .ariaLabel('ENABLE TRANSACTION')
                 .ok('YES')
                 .cancel('NO');
       

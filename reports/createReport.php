@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(E_ERROR | E_PARSE);
 include('../UtilityFiles/checkLogin.php');
 $var = check_login_func();
 
