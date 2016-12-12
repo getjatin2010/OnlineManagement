@@ -98,13 +98,19 @@ function ChapterTitle($num, $label)
 function ChapterBody($num, $title, $acid)
 {
 
-$headerPrinted = false;
-global $totalG,$totalGReceived,$totalGDefective,$totalGCorrect,$totalGMissing;
+
+global $totalGDelivered,$totalGReceived,$totalGDefective,$totalGCorrect,$totalGMissing;
 include "../DatabaseConnection/config.php";
 
 $sql = "SELECT * FROM `transactions` WHERE `Disabled` = 0 && `acid` =  '$acid'  ORDER BY recordId ASC";
 $fetch = mysqli_query($conn,$sql); 
 $firstTime = true;
+
+$totalDelivered = 0;
+$totalReceived = 0;
+$totalMissing = 0;
+$totalDefective = 0;
+$totalCorrect = 0;
 
 while ($row = $fetch->fetch_assoc()) 
 {          
@@ -118,6 +124,8 @@ while ($row = $fetch->fetch_assoc())
 
 
     $epicDelivered = $row['quantity'];
+	$totalDelivered = $totalDelivered + $epicDelivered;
+
     $recordId = $row['recordId'];
     $dateOfSending =  $row['dateOfSending'];
     $newDate = date("d-m-Y", strtotime($dateOfSending));
@@ -132,10 +140,19 @@ while ($row = $fetch->fetch_assoc())
     $fetch2 = mysqli_query($conn,$sql); 
 
     $row2 = $fetch2->fetch_assoc();
+
     $epicReceived =  $row2['received'];
+    $totalReceived = $totalReceived + $epicReceived;
+    
     $epicDefective =  $row2['defective'];
+	$totalDefective = $totalDefective + $epicDefective;
+
     $epicMissing = $epicDelivered -$epicReceived;
+	$totalMissing = $totalMissing + $epicMissing;
+
+
     $epicCorrect = $epicReceived -$epicDefective;
+	$totalCorrect = $totalCorrect + $epicCorrect;
     //$dateString = $this->changeFormat($receivedDate);
 
 
@@ -159,6 +176,8 @@ while ($row = $fetch->fetch_assoc())
     $this->SetX(170);
     $this->Cell(30,15,$epicCorrect,0,0,'C');
 
+
+
     }
     else
     {
@@ -173,9 +192,46 @@ while ($row = $fetch->fetch_assoc())
     }
 $this->Ln(5);    
 }
+
+
+
 if($firstTime==false)
 {
-$this->Ln(10);  
+
+
+$this->Ln(5);  	
+$y = $this->GetY();
+$this->SetX(10);
+$this->SetLineWidth(.5);
+$this->Line(60,$y,200,$y); 	
+
+ 	$this->SetX(0);
+    $this->SetX(50);
+    $this->Cell(30,5,$totalDelivered,0,0,'C');
+    $totalGDelivered = $totalGDelivered + $totalDelivered;
+    
+    $this->SetX(80);
+    $this->Cell(30,5,$totalReceived,0,0,'C');
+    $totalGReceived = $totalGReceived + $totalReceived;
+
+    $this->SetX(110);
+    $this->Cell(30,5,$totalMissing,0,0,'C');
+    $totalGMissing = $totalGMissing + $totalMissing;    
+
+    $this->SetX(140);
+    $this->Cell(30,5,$totalDefective,0,0,'C');
+    $totalGDefective= $totalGDefective + $totalDefective;
+
+    $this->SetX(170);
+    $this->Cell(30,5,$totalCorrect,0,0,'C');
+	$totalGCorrect = $totalGCorrect + $totalCorrect;
+
+
+
+$this->Ln(10);
+
+
+
 }
 
 // $this->SetFont('Times','',12);
@@ -228,7 +284,8 @@ $this->Ln(10);
 function PrintGrandTotal($word)
 {
 
-global $totalG,$totalGReceived,$totalGDefective,$totalGCorrect,$totalGMissing;
+
+global $totalGDelivered,$totalGReceived,$totalGDefective,$totalGCorrect,$totalGMissing;
 
 $this->Ln(5);
     $this->SetFont('Arial','B',12);
@@ -242,11 +299,37 @@ $this->Ln(5);
     $this->SetTextColor(0,0,0); 
     $this->SetFont('Arial','B',12);
     $this->Ln(15);
-    //$totalString = "Total epics under Transition";
+
+    $totalGDeliveredString = "Total EPICS Sent";
+    $totalGReceivedString = "Total EPICS Received";
+    $totalGMissingString = "Total EPICS Missing";
+    $totalGDefectiveString = "Total EPICS Defective";
+    $totalGCorrectString = "Total EPICS Correct";
+    
     $this->SetX(10);
-   // $this->Cell(20,5,$totalString,0,0);
+    
+    $this->Cell(20,5,$totalGDeliveredString,0,0);
     $this->SetX(70);
-    //$this->Cell(30,5,$totalG,0,0,'C');	
+    $this->Cell(30,5,$totalGDelivered,0,0,'C');	
+    $this->Ln(5);
+
+    $this->Cell(20,5,$totalGReceivedString,0,0);
+    $this->SetX(70);
+    $this->Cell(30,5,$totalGReceived,0,0,'C');	
+    $this->Ln(5);
+
+    $this->Cell(20,5,$totalGMissingString,0,0);
+    $this->SetX(70);
+    $this->Cell(30,5,$totalGMissing,0,0,'C');	
+    $this->Ln(5);
+
+    $this->Cell(20,5,$totalGDefectiveString,0,0);
+    $this->SetX(70);
+    $this->Cell(30,5,$totalGDefective,0,0,'C');	
+    $this->Ln(8);
+	$this->Cell(20,5,$totalGCorrectString,0,0);
+    $this->SetX(70);
+    $this->Cell(30,5,$totalGCorrect,0,0,'C');	
     $this->Ln(5);
    
 
@@ -259,6 +342,14 @@ function PrintChapter($num, $title, $id)
 }
 
 }
+
+global $totalGDelivered,$totalGReceived,$totalGDefective,$totalGCorrect,$totalGMissing;
+
+$totalGDelivered = 0;
+$totalGReceived = 0;
+$totalGCorrect = 0;
+$totalGDefective = 0;
+$totalGMissing = 0;
 
 $pdf = new PDF();
 $pdf->SetTitle("EPICS UNDER TRANSITION");
