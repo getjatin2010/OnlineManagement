@@ -1,0 +1,31 @@
+<div ng-controller="contactsControl" ng-cloak layout-gt-sm="row" layout="column">
+  <div flex-gt-sm="50" flex>
+    <md-toolbar layout="row" class="md-hue-3" layout-align ="left center" >
+      &nbsp;	&nbsp;	&nbsp;	&nbsp;
+      <div>
+        <span>CONTACTS</span>
+      </div>
+      &nbsp;	&nbsp;	&nbsp;	&nbsp;
+      <div>
+        <md-select ng-model="districtsForDisplay.districtsForDisplaySelected" ng-change="getNewValuesForContacts()" >
+          <md-option ng-repeat="districtObject in districtsForDisplay"  ng-value="districtObject">{{districtObject.district}}</md-option>
+        </md-select>
+      </div>
+    </md-toolbar>
+    <md-content>
+      <md-list flex>
+        <md-list-item class="md-3-line-contact" ng-repeat="item in contacts" >
+          <div class="md-list-item-text" layout="column" ng-style="{'background-color': '#B0E0E6' }">
+              
+                <div class="col-md-3 ">{{ item.districtName }}
+                </div>
+                <div class="col-md-3 "> {{ item.PersonName }}&nbsp;  &nbsp;  &nbsp;  &nbsp;Ph.&nbsp;{{ item.stdCode }}-{{ item.ContactLL }},&nbsp;(M)-{{ item.ContactMM }}
+                </div>
+                 <div class="col-md-3 ">
+                </div>
+     
+  </md-list-item>
+  </md-list>
+  </md-content>
+</div>
+</div>

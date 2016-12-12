@@ -16,11 +16,15 @@
       {
       border-bottom: 6pt double white;
       }
+       .md-4-line-contact
+      {
+      border-bottom: 3pt  white;
+      }
       .md-list-item-text
       {
       width : 100%;
-      padding-left : 30px;
-      padding-bottom : 10px;
+      padding-left : 10px;
+      padding-bottom : 20px;
       }
       .datepickerdemoBasicUsage {
       /** Demo styles for mdCalendar. */ }
@@ -184,6 +188,7 @@
       <li><a href="#createNewRecord">New Transaction</a></li>
       <li><a href="#pending">Pending Transactions</a></li>
       <li><a href="#CompletedTransactions">Completed Transactions</a></li>
+      <li><a href="#Contacts">Contact List</a></li>
       <li><a href="#trash">Trash</a></li>
       <li><a href="#reports">Reports</a></li>
       <li style="float:right"><a href="../UtilityFiles/logout.php">Logout</a></li>
@@ -217,6 +222,9 @@
           })
           .when("/trash", {
               templateUrl : "../Html/trash.html", controller: "trashControl"
+          })
+          .when("/Contacts", {
+              templateUrl : "../Html/contacts.html", controller: "contactsControl"
           })
           .when("/reports", {
               templateUrl : "../Html/reports.html"
@@ -535,7 +543,6 @@
       (
       function(response) 
       {
-        console.log(response.data);
       if(response.data.login==0)
         {
         $window.alert("Please Login");
@@ -682,6 +689,96 @@
       });
       
       
+      app.controller('contactsControl', function($scope,$http,$mdDialog,$route,$window) {
+       
+      $http.post('../UtilityFiles/contacts.php').then
+      (
+      function(response) 
+      {
+         if(response.data.login==0)
+        {
+        $window.alert("Please Login");
+        $window.location.href = '../Face/login.php';
+        }
+        else
+        {
+        $scope.contacts = (response.data);
+        $scope.contactsBackup = (response.data);    
+        }
+      }
+      
+      );
+      
+      
+      $http.post('../UtilityFiles/GetOptionContacts.php',$scope.data).then
+      (
+      function(response)
+      {
+      $scope.districtsForDisplay = response.data;
+      $scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisplay[0];
+      }
+      );
+      
+       function DialogController($scope, $mdDialog,$route) {
+          $scope.hide = function() {
+            $mdDialog.hide();
+          };
+          $scope.cancel = function() {
+            $mdDialog.cancel();
+          };
+          $scope.answer = function(answer) {
+            $mdDialog.hide(answer);
+          };
+        }
+      
+      
+      
+      
+   
+      
+      $scope.getNewValuesForContacts =function()
+      {
+      $scope.found = false;
+      $scope.contacts = [];
+      //$scope.contacts.push($scope.contactsBackup[0]);
+        if($scope.districtsForDisplay.districtsForDisplaySelected.districtId == 99)
+        {
+          $scope.found = true;
+          $scope.contacts = $scope.contactsBackup;
+        }
+        else
+        {
+           angular.forEach($scope.contactsBackup, function(value, key)
+          {
+          if($scope.contactsBackup[key].districtName == $scope.districtsForDisplay.districtsForDisplaySelected.district)
+          {
+            $scope.found = true;    
+            $scope.contacts.push($scope.contactsBackup[key]);
+          }   
+        }
+        );
+        }
+      
+        if($scope.found==false)
+        {
+         $mdDialog.show(
+            $mdDialog.alert()
+              .parent(angular.element(document.querySelector('#popupContainer')))
+              .clickOutsideToClose(true)
+              .title('No Transactions in contacts for this district')
+              .textContent('')
+              .ariaLabel('Alert')
+              .ok('Got it!')
+          );
+        }
+        
+      }
+      
+      
+      });
+
+
+
       app.controller('trashControl', function($scope,$http,$mdDialog,$route,$window) {
        
       $http.post('../UtilityFiles/trash.php').then

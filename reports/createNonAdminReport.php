@@ -62,10 +62,10 @@ function Header()
     $this->Cell(30,15,"Missing Epics",0,0,'C');
     
     $this->SetX(140);
-    $this->Cell(30,15,"Correct Epics",0,0,'C');
+    $this->Cell(30,15,"Defective Epics",0,0,'C');
     
     $this->SetX(170);
-    $this->Cell(30,15,"Defective Epics",0,0,'C');
+    $this->Cell(30,15,"Correct Epics",0,0,'C');
     
     $this->Ln(10);
 	
@@ -102,7 +102,7 @@ $headerPrinted = false;
 global $totalG,$totalGReceived,$totalGDefective,$totalGCorrect,$totalGMissing;
 include "../DatabaseConnection/config.php";
 
-$sql = "SELECT * FROM `transactions` WHERE `Disabled` = 0 && `acid` =  '$acid'  ORDER BY dateOfRecord DESC";
+$sql = "SELECT * FROM `transactions` WHERE `Disabled` = 0 && `acid` =  '$acid'  ORDER BY recordId ASC";
 $fetch = mysqli_query($conn,$sql); 
 $firstTime = true;
 
@@ -154,10 +154,10 @@ while ($row = $fetch->fetch_assoc())
     $this->Cell(30,15,$epicMissing,0,0,'C');
     
     $this->SetX(140);
-    $this->Cell(30,15,$epicCorrect,0,0,'C');
-    
-    $this->SetX(170);
     $this->Cell(30,15,$epicDefective,0,0,'C');
+
+    $this->SetX(170);
+    $this->Cell(30,15,$epicCorrect,0,0,'C');
 
     }
     else
