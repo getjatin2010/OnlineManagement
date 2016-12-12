@@ -16,12 +16,14 @@
       <md-list flex>
         <md-list-item class="md-3-line-contact" ng-repeat="item in contacts" >
           <div class="md-list-item-text" layout="column" ng-style="{'background-color': '#B0E0E6' }">
-              
-                <div class="col-md-3 ">{{ item.districtName }}
+           <div class="row">
+                <div class="col-md-3 "  style="width:120px;" > <b>{{ item.districtName }}</b>
                 </div>
-                <div class="col-md-3 "> {{ item.PersonName }}&nbsp;  &nbsp;  &nbsp;  &nbsp;Ph.&nbsp;{{ item.stdCode }}-{{ item.ContactLL }},&nbsp;(M)-{{ item.ContactMM }}
+                <div class="col-md-3 " style="width:250px;" > <b>{{ item.PersonName }}</b>
                 </div>
-                 <div class="col-md-3 ">
+                 <div class="col-md-3 " style="width:400px;""><b>
+                 Ph.&nbsp;{{ item.stdCode }}-{{ item.ContactLL }},&nbsp;(M)-{{ item.ContactMM }}</b>
+                </div>
                 </div>
      
   </md-list-item>
