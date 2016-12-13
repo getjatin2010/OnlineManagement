@@ -234,52 +234,7 @@ $this->Ln(10);
 
 }
 
-// $this->SetFont('Times','',12);
 
-
-// $countAc = 0 ;
-// while ($rowAc = $fetchAc->fetch_assoc()) {          
-//         $countAc = $countAc + 1;
-
-// /// Getting Data
-
-// /// geetting transactions that happened
-//         include "../DatabaseConnection/config.php";
-//         $sql = "SELECT * FROM `transactions` WHERE `Disabled` = 0 && `delivered` = 0 && `acid` = '".$rowAc['ac_no']."'";        
-//         $fetchtrans = mysqli_query($conn,$sql);
-//         mysqli_close($conn);            
-//         $total = 0 ;
-//         while ($rowtrans = $fetchtrans->fetch_assoc())
-//         {
-//           $reponseFound = 1;
-//           $total = $total + $rowtrans['quantity'];  
-//         }
-//         if($total!=0)
-//         {
-//         if($headerPrinted==false)
-//         {
-//         $headerPrinted = true;      
-//         }       
-//         $this->Cell(20,5,$rowAc['ac_no'].' '.$rowAc['ac_name_e'],0,0);
-//         $this->SetX(50);
-//             $this->Cell(30,5,$total,0,0,'C');
-//         $this->Ln();
-//         $totalD = $totalD+$total;
-//         }       
-//     }
-//     if($totalD!=0)
-//     {
-//     $this->Ln();
-//     $y = $this->GetY();
-//     $this->SetX(50);    
-//     $this->Line(61,$y,69,$y);
-//     $this->Cell(30,5,$totalD,0,0,'C');
-//     $this->Ln(10);
-    
-//     //---------------------
-//     $totalG = $totalG+$totalD;
-//     //---------------------
-//     }
  }
 function PrintGrandTotal($word)
 {
