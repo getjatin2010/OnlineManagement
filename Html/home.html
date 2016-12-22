@@ -428,8 +428,22 @@
       }
       else
       {
-        $scope.history = (response.data);
-        $scope.historyBackup = (response.data);
+         $scope.history = (response.data);
+         $scope.historyBackup = (response.data);
+         $scope.historySumQuantity = 0;
+         $scope.historySumCorrect = 0;
+	    angular.forEach($scope.historyBackup, function(value, key){
+
+
+	  		$scope.historySumQuantity =   parseInt($scope.historyBackup[key].quantity, 10) +  $scope.historySumQuantity  ;
+            $scope.correctEpic =  parseInt($scope.historyBackup[key].received,10) - parseInt($scope.historyBackup[key].defective,10);
+            $scope.historySumCorrect =  $scope.correctEpic +  $scope.historySumCorrect  ;
+        	
+            
+        });
+
+	  	//console.log();
+
       }
       }
       
@@ -453,12 +467,21 @@
       //$scope.history.push($scope.historyBackup[0]);
       if($scope.districtsForDisplay.districtsForDisplaySelected.districtId<=22 && $scope.districtsForDisplay.districtsForDisplaySelected.districtId>=1 )
       	{
+      		$scope.historySumQuantity = 0;
+      		$scope.historySumCorrect =0 ;
       		angular.forEach($scope.historyBackup, function(value, key){
       		
       	
       		if($scope.historyBackup[key].districtId==$scope.districtsForDisplay.districtsForDisplaySelected.districtId)
       		{		
       			$scope.found=true;
+
+      		$scope.historySumQuantity =   parseInt($scope.historyBackup[key].quantity, 10) +  $scope.historySumQuantity  ;
+            $scope.correctEpic =  parseInt($scope.historyBackup[key].received,10) - parseInt($scope.historyBackup[key].defective,10);
+            $scope.historySumCorrect =  $scope.correctEpic +  $scope.historySumCorrect  ;
+        	
+
+
       			$scope.history.push($scope.historyBackup[key]);
       		}		
       	});
@@ -467,6 +490,19 @@
       	{
       		$scope.found=true;
       		$scope.history = $scope.historyBackup;
+
+      		$scope.historySumQuantity = 0;
+         $scope.historySumCorrect = 0;
+	    angular.forEach($scope.historyBackup, function(value, key){
+
+
+	  		$scope.historySumQuantity =   parseInt($scope.historyBackup[key].quantity, 10) +  $scope.historySumQuantity  ;
+            $scope.correctEpic =  parseInt($scope.historyBackup[key].received,10) - parseInt($scope.historyBackup[key].defective,10);
+            $scope.historySumCorrect =  $scope.correctEpic +  $scope.historySumCorrect  ;
+        	
+            
+        });
+
       	}
       	
       
