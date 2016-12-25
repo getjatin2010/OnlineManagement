@@ -15,14 +15,12 @@ if($var==NULL || $var!=0)
 
 $filedata = file_get_contents('php://input',true);
 $arr = json_decode($filedata);
-$startDate = $_SESSION['startDate'];
-$endDate = $_SESSION['endDate'];
 $totalG = 0;
 $totalGReceived = 0;
 $totalGDefective = 0;
 $totalGCorrect = 0;
 $totalGMissing = 0;
-
+$reportRoundId = 0;
 
 
 class PDF extends FPDF
@@ -32,7 +30,7 @@ class PDF extends FPDF
 function Header()
 {
     global $title;
-
+    global $reportRoundId;
     // Arial bold 15
     $this->SetFont('Arial','B',15);
     $this->Image('../img/logo.png',10,6,30);
@@ -47,9 +45,8 @@ function Header()
     // Title
     $this->Cell($w,15,$title,0,0,'C');
     $this->Ln(7);
-    $dateStarting = $this->changeFormat($_SESSION['startDate']);
-    $dateEnding = $this->changeFormat($_SESSION['endDate']);
-    $line2 =  $dateStarting."    to    ".$dateEnding;
+    $reportRoundId = $_SESSION['reportRoundId'];
+    $line2 =  "Round : ".$reportRoundId;
     $w = $this->GetStringWidth($line2)+6;
     $this->SetX((210-$w)/2);
     $this->SetTextColor(0,0,0); 
@@ -106,7 +103,7 @@ function ChapterBody($file)
 {
 
 
-global $totalG,$totalGReceived,$totalGDefective,$totalGCorrect,$totalGMissing;
+global $totalG,$totalGReceived,$totalGDefective,$totalGCorrect,$totalGMissing,$reportRoundId;
 
 include "../DatabaseConnection/config.php";
 $this->SetFont('Times','',12);
@@ -130,7 +127,7 @@ while ($rowAc = $fetchAc->fetch_assoc()) {
 
 /// geetting transactions that happened
 		include "../DatabaseConnection/config.php";
-		$sql = "SELECT * FROM `transactions` WHERE `Disabled` = 0 && `delivered` = 1 && `acid` = '".$rowAc['ac_no']."' && `dateOfSending` <= '".$_SESSION['endDate']."' && `dateOfSending` >= '".$_SESSION['startDate']."'";		
+		$sql = "SELECT * FROM `transactions` WHERE `Disabled` = 0 && `delivered` = 1 && `acid` = '".$rowAc['ac_no']."' && `roundId` = '".$reportRoundId."' ";		
 		$fetchtrans = mysqli_query($conn,$sql);
 		mysqli_close($conn);			
 		$total = 0 ;

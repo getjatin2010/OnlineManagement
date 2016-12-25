@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <head>
     <style>
+   
       .md-3-line
       {
       border-bottom: 6pt double white;
@@ -102,7 +103,7 @@
       {
       text-align: center;	
       background-color: #FFFFFF;
-      background-image:url(../img/symphony.png);
+      background-image:url(../img/background.png);
       background-size:15%;
       background-attachment:scroll;
       background-repeat:none;
@@ -114,7 +115,26 @@
       color: #424242;
       font-family: 'Open Sans', Arial, sans-serif;;
       font-style:bold;
-      }
+      position:relative;
+     }
+
+      #RoundDiv{                /* added */
+   		 position:absolute;                  /* added */
+  		 bottom:0;                           /* added */
+   		 right:0;
+   		                             /* added */
+	 }
+   #Refresh{                /* added */
+       position:absolute;                  /* added */
+       top:0;                           /* added */
+       right:0;
+                                   /* added */
+   }
+
+md-input-container {
+    padding-bottom: 5px;
+    text-decoration-color: #000000;
+}
       body
       {
       background-color:#FFFFFF;
@@ -177,12 +197,26 @@
       }
     </style>
   </head>
-  <body ng-app = "homeMainApp">
+  <body ng-app = "homeMainApp" ng-controller="homeController" >
     <div class="heading" layout = "row">
       <img src = "../img/logo.png" style = "width:20%;"/>
       <h1>
         EPIC Delivery Tracking System
       </h1>
+
+      <div id = "RoundDiv" >
+      <h3 style="color:#000000;">
+       &nbsp;  &nbsp;  &nbsp;  &nbsp; Round:  <md-input-container id = "chooseRound"  placeholder="#00ff00">
+         <md-select ng-model="roundSelected" ng-change="roundChanged()">
+    <md-option ng-repeat="round in roundData"  ng-value="round">{{round.roundId}}
+    </md-option>
+      </md-select>
+  </md-input-container>  &nbsp; &nbsp;{{startingString}}
+     </h3>
+      </div>
+    <div id = "Refresh">
+    <md-button class="md-primary md-raised" ng-click="refresh" flex="15">Refresh</md-button>
+    </div>
     </div>
     <ul>
       <li><a href="#createNewRecord">New Transaction</a></li>
@@ -200,12 +234,10 @@
       function($routeProvider,$mdDateLocaleProvider)
       {
       
-      
       $mdDateLocaleProvider.formatDate = 
       function(date) {
               return date ? moment(date).format('DD-MM-YYYY') : '';
           	       };
-      
       
        $routeProvider
           .when("/createNewRecord", {
@@ -229,9 +261,205 @@
           .when("/reports", {
               templateUrl : "../Html/reports.html"
           });
+
+
       });
       
+
       
+ app.controller('homeController', function($rootScope,$scope,$http,$location,$window) {
+  
+  $scope.formatDate = 
+      function(date) {
+              return date ? moment(date).format('DD-MM-YYYY') : '';
+                   };
+
+   $rootScope.getPending = function() {
+        $scope.pendingInfo= {};
+        $scope.pendingInfo.roundId = $scope.roundId;
+        console.log($scope.pendingInfo);
+        $http.post('../UtilityFiles/pending.php',$scope.pendingInfo).then
+        (
+        function(response) 
+        {
+        if(response.data.login==0)
+          {
+          $window.alert("Please Login");
+          $window.location.href = '../Face/login.php';
+          }
+        else
+        {
+          $scope.pending = (response.data);
+          $scope.pendingBackup = (response.data);
+          $scope.pendingSum = 0;
+          angular.forEach($scope.pendingBackup, function(value, key){
+          
+              $scope.pendingSum =   parseInt($scope.pendingBackup[key].quantity, 10) +  $scope.pendingSum ;
+          });
+
+        }
+        }
+        
+        );
+      }   
+
+      $rootScope.getHistory = function()
+      {
+      $scope.historyInfo= {};
+      $scope.historyInfo.roundId = $scope.roundId;
+      console.log($scope.historyInfo);
+      $http.post('../UtilityFiles/history.php',$scope.historyInfo).then
+      (
+      function(response) 
+      {
+        console.log(response.data);
+        if(response.data.login==0)
+      {
+        $window.alert("Please Login");
+        $window.location.href = '../Face/login.php';
+      }
+      else
+      {
+         $scope.history = (response.data);
+         $scope.historyBackup = (response.data);
+         $scope.historySumQuantity = 0;
+         $scope.historySumCorrect = 0;
+      angular.forEach($scope.historyBackup, function(value, key){
+
+
+        $scope.historySumQuantity =   parseInt($scope.historyBackup[key].quantity, 10) +  $scope.historySumQuantity  ;
+            $scope.correctEpic =  parseInt($scope.historyBackup[key].received,10) - parseInt($scope.historyBackup[key].defective,10);
+            $scope.historySumCorrect =  $scope.correctEpic +  $scope.historySumCorrect  ;
+          
+            
+        });
+
+      //console.log();
+
+      }
+      }
+      
+      );
+      }             
+
+ $rootScope.getTrash = function()
+      {
+      $scope.trashInfo= {};
+      $scope.trashInfo.roundId = $scope.roundId;
+      console.log($scope.trashInfo);
+    $http.post('../UtilityFiles/trash.php',$scope.trashInfo).then
+      (
+      function(response) 
+      {
+         if(response.data.login==0)
+        {
+        $window.alert("Please Login");
+        $window.location.href = '../Face/login.php';
+        }
+        else
+        {
+        $scope.trash = (response.data);
+        $scope.trashBackup = (response.data);    
+        }
+      }
+      
+      );
+      }
+      
+
+ 	$scope.roundChanged = function(ev)
+ 	{
+ 		var absUrl = $location.absUrl();
+ 		$scope.roundId = $scope.roundSelected.roundId;
+    	$scope.min_date_round = new Date($scope.roundSelected.from);
+      $scope.roundSelected.from = $scope.formatDate($scope.roundSelected.from);
+      if( $scope.roundSelected.to == null)
+      {
+        $scope.startingString = $scope.roundSelected.from + " onwards";
+        $scope.max_date_round = new Date(); 
+      }
+      else	
+ 		   {
+        $scope.max_date_round = new Date($scope.roundSelected.to);
+        $scope.roundSelected.to = $scope.formatDate($scope.roundSelected.to);
+        $scope.startingString  = $scope.roundSelected.from +" - " + $scope.roundSelected.to;
+       }
+     		if(absUrl.indexOf('pending') !== -1)
+ 			{
+ 				$rootScope.getPending();
+ 			}	
+ 			else if(absUrl.indexOf('CompletedTransactions') !== -1)
+ 			{
+ 				$rootScope.getHistory();
+ 			}
+ 			else if(absUrl.indexOf('trash') !== -1)
+ 			{
+ 				$rootScope.getTrash();
+ 			}
+ 			else if(absUrl.indexOf('reports') !== -1)
+ 			{
+
+ 			}
+ 			else if(absUrl.indexOf('createNewRecord') !== -1)
+ 			{
+
+ 			}
+ 			else
+ 			{
+
+ 			}
+ 	}
+$rootScope.refresh = function()
+{
+           $rootScope.getPending();
+            $rootScope.getHistory();
+            $rootScope.getTrash();
+}
+
+$scope.getRounds = function()
+{
+ 	$http.post('../UtilityFiles/getRounds.php',$scope.data).then
+      (
+      function(response)
+      {
+      
+      if(response.data.login==0)
+        {
+        $window.alert("Please Login");
+        $window.location.href = '../Face/login.php';
+        }
+      else
+        {
+             $scope.roundData = response.data;
+              angular.forEach($scope.roundData, function(value, key){
+        	 if($scope.roundData[key].to == null)
+        	{
+            $scope.roundSelected = $scope.roundData[key];
+
+        		$scope.roundId = $scope.roundData[key].roundId;
+        		$scope.from = $scope.roundData[key].from;
+            $scope.roundSelected.from = $scope.formatDate($scope.roundSelected.from);
+            $scope.startingString = $scope.roundSelected.from+ " onwards";   
+ 				    $scope.min_date_round = new Date($scope.from);
+            $scope.max_date_round = new Date();
+          }
+   
+        });
+            $rootScope.getPending();
+            $rootScope.getHistory();
+            $rootScope.getTrash();
+        }  
+      }
+
+      );
+}
+
+$scope.getRounds();
+
+});	
+
+
+
       app.controller('recordController',function($scope,$http,$mdDialog,$window)
       {
       $scope.max_date = new Date();
@@ -338,7 +566,7 @@
       
       $scope.value = $scope.data.sendDate.toString();
       $scope.data.sendDateString = $scope.value.slice(0,16);
-      
+      $scope.data.roundId = $scope.roundId;
       //to cover the indian time zone
       $scope.data.sendDate.setHours(12);
       
@@ -411,44 +639,14 @@
         return check;
       };
       
-      app.controller('historyControl', function($scope,$http,$mdDialog,$window) {
+      app.controller('historyControl', function($scope,$http,$mdDialog,$window,$rootScope) {
       
       
       
       $scope.buttonValue = ""; 
       $scope.received = "";
-      $http.post('../UtilityFiles/history.php').then
-      (
-      function(response) 
-      {
-        if(response.data.login==0)
-      {
-        $window.alert("Please Login");
-        $window.location.href = '../Face/login.php';
-      }
-      else
-      {
-         $scope.history = (response.data);
-         $scope.historyBackup = (response.data);
-         $scope.historySumQuantity = 0;
-         $scope.historySumCorrect = 0;
-	    angular.forEach($scope.historyBackup, function(value, key){
-
-
-	  		$scope.historySumQuantity =   parseInt($scope.historyBackup[key].quantity, 10) +  $scope.historySumQuantity  ;
-            $scope.correctEpic =  parseInt($scope.historyBackup[key].received,10) - parseInt($scope.historyBackup[key].defective,10);
-            $scope.historySumCorrect =  $scope.correctEpic +  $scope.historySumCorrect  ;
-        	
-            
-        });
-
-	  	//console.log();
-
-      }
-      }
       
-      );
-      
+
       
       
       $http.post('../UtilityFiles/GetOptions.php',$scope.data).then
@@ -460,6 +658,8 @@
       }
       );
       
+   
+
       $scope.getNewValuesForHistory =function()
       {
       $scope.found=false;
@@ -573,31 +773,9 @@
       });
       
       
-      app.controller('pendingControl', function($scope,$http,$mdDialog,$route,$window) {
-       
-      $http.post('../UtilityFiles/pending.php').then
-      (
-      function(response) 
-      {
-      if(response.data.login==0)
-        {
-        $window.alert("Please Login");
-        $window.location.href = '../Face/login.php';
-        }
-      else
-      {
-        $scope.pending = (response.data);
-        $scope.pendingBackup = (response.data);
-        $scope.pendingSum = 0;
-        angular.forEach($scope.pendingBackup, function(value, key){
-        
-            $scope.pendingSum =   parseInt($scope.pendingBackup[key].quantity, 10) +  $scope.pendingSum ;
-        });
+      app.controller('pendingControl', function($scope,$http,$mdDialog,$route,$window,$rootScope) {
 
-      }
-      }
-      
-      );
+
       
       
       $http.post('../UtilityFiles/GetOptions.php',$scope.data).then
@@ -622,7 +800,8 @@
         }
       
       
-      
+    
+
       $scope.disableTransaction = function(ev) {
           // Appending dialog to document.body to cover sidenav in docs app
           var confirm = $mdDialog.confirm()
@@ -639,7 +818,7 @@
       		{
       			if(response.data.trashed==1)
       			{
-      				$route.reload();
+      			   $rootScope.refresh();
       			}
       			else
       			{
@@ -815,27 +994,10 @@
 
 
 
-      app.controller('trashControl', function($scope,$http,$mdDialog,$route,$window) {
+      app.controller('trashControl', function($scope,$http,$mdDialog,$route,$window,$rootScope) {
        
-      $http.post('../UtilityFiles/trash.php').then
-      (
-      function(response) 
-      {
-         if(response.data.login==0)
-        {
-        $window.alert("Please Login");
-        $window.location.href = '../Face/login.php';
-        }
-        else
-        {
-        $scope.trash = (response.data);
-        $scope.trashBackup = (response.data);    
-        }
-      }
-      
-      );
-      
-      
+
+     
       $http.post('../UtilityFiles/GetOptions.php',$scope.data).then
       (
       function(response)
@@ -876,7 +1038,7 @@
           {
             if(response.data.trashed==1)
             {
-              $route.reload();
+              $rootScope.refresh();
             }
             else
             {
@@ -962,17 +1124,10 @@
       			$window.open("../reports/EpicsUnderTransition.php",'_blank');
       			return;
       		}
-      	
-      	
-      		$mdDialog.show({
-            controller: DialogController,
-      	  scope: $scope,
-      	  preserveScope: true,
-            templateUrl: '../Html/ReportForm.html',
-            parent: angular.element(document.body),
-            clickOutsideToClose:true,
-            fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
-      		})
+      	  else
+          {
+            $scope.dataReportSend();
+          }
       	};
         
       $scope.showAlert = function(ev) {
@@ -989,55 +1144,23 @@
       			  };
       
       
-       function DialogController($scope, $mdDialog,$route,$http) {
-      	$scope.max_date = new Date();
-          $scope.hide = function() {
-            $mdDialog.hide();
-          };
-          $scope.cancel = function() {
-            $mdDialog.cancel();
-          };
-          $scope.answer = function(answer) {
-            $mdDialog.hide(answer);
-          };
-      }
+       
       $scope.data = {};
       $scope.dataReportSend = function()
       		{
       			
-      			  if ($scope.data.fromDate > $scope.data.toDate) {
-      						$scope.data.error = "Please select select a valid dates";
-      				}
-      
-      			else if($scope.data.fromDate == "" || $scope.data.fromDate == null || $scope.data.toDate == "" || $scope.data.toDate == null)
-      			{
-      				$scope.data.error = "Please select select a valid date";
-      			}
-      			else
-      			{
-      			$scope.value = $scope.data.fromDate.toString();
-      			$scope.data.fromDateString = $scope.value.slice(0,16);
-      
-      			//to cover the indian time zone
-      			$scope.data.fromDate.setHours(12);
-      			
-      			$scope.value = $scope.data.toDate.toString();
-      			$scope.data.toDateString = $scope.value.slice(0,16);
-      
-      			//to cover the indian time zone
-      			$scope.data.toDate.setHours(12);
+            $scope.data.roundId = $scope.roundId;
       			$http.post('../reports/createReport.php',$scope.data).then
       			(
       				function(response) 
       				{
-      				$mdDialog.hide();
       				if($scope.reportNumber == 1)
       				$window.open("../reports/AcceptedEpicSummary.php",'_blank');
       				if($scope.reportNumber == 2)
       				$window.open("../reports/EpicsUnderTransition.php",'_blank');
       				}
       			);
-      			}
+      			
       		}
       		
       

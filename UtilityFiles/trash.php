@@ -16,22 +16,17 @@ if($var==NULL || $var!=0)
 
 $filedata = file_get_contents('php://input',true);
 $arr = json_decode($filedata);
+$roundId = $arr->roundId;
 
-if($arr->districtId>=1 && $arr->districtId <=22)
-{
-$var = getRecordsChoosing($arr->districtId);
-}
-else
-{
-$var = getRecords();	
-}
+
+$var = getRecords($roundId);	
 echo $var;
 
 
-function getRecords()
+function getRecords($roundId)
 {
 	$userId = $_SESSION['username'];	
-	$sql = "SELECT * FROM transactions where Disabled = 1  ORDER BY dateOfRecord DESC";	
+	$sql = "SELECT * FROM transactions where Disabled = 1 && roundId = '$roundId' ORDER BY dateOfRecord DESC";	
 	$response = adminRecords($sql);
 	return $response;
 }

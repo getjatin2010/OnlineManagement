@@ -41,11 +41,12 @@ function enterRecordsInDb($arr)
 	$quantity = mysqli_real_escape_string($conn,$arr->quantity);
 	$date_rec = mysqli_real_escape_string($conn,$arr->sendDate);
 	$comments = mysqli_real_escape_string($conn,$arr->comment);
+	$roundId = mysqli_real_escape_string($conn,$arr->roundId);
 	$userId = $_SESSION['username'];
 	$date_rec = substr($date_rec, 0,10);
 	echo $date_rec;
 
-	$sql = "INSERT INTO transactions (districtId,acid, mobileNumberSender, DateOfSending, Quantity, mediumId, AdditionalComments) VALUES ('$dist_no','$ac_no','$userId','$date_rec','$quantity','$medium_no','$comments')";
+	$sql = "INSERT INTO transactions (districtId,acid, mobileNumberSender, DateOfSending, Quantity, mediumId, AdditionalComments,roundId) VALUES ('$dist_no','$ac_no','$userId','$date_rec','$quantity','$medium_no','$comments','$roundId')";
 	echo $sql; 
 	$query=mysqli_query($conn,$sql);
 
