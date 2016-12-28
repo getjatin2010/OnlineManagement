@@ -196,6 +196,8 @@ md-input-container {
       color: #0000ff;
       }
     </style>
+    
+    <link rel="icon" href="../img/logo.png">
   </head>
   <body ng-app = "homeMainApp" ng-controller="homeController" >
     <div class="heading" layout = "row">
@@ -214,9 +216,7 @@ md-input-container {
   </md-input-container>  &nbsp; &nbsp;{{startingString}}
      </h3>
       </div>
-    <div id = "Refresh">
-    <md-button class="md-primary md-raised" ng-click="refresh" flex="15">Refresh</md-button>
-    </div>
+   
     </div>
     <ul>
       <li><a href="#createNewRecord">New Transaction</a></li>
@@ -275,6 +275,8 @@ md-input-container {
                    };
 
    $rootScope.getPending = function() {
+
+        $rootScope.getOptions();
         $scope.pendingInfo= {};
         $scope.pendingInfo.roundId = $scope.roundId;
         console.log($scope.pendingInfo);
@@ -305,6 +307,8 @@ md-input-container {
 
       $rootScope.getHistory = function()
       {
+
+     $rootScope.getOptions();    
       $scope.historyInfo= {};
       $scope.historyInfo.roundId = $scope.roundId;
       console.log($scope.historyInfo);
@@ -344,6 +348,8 @@ md-input-container {
 
  $rootScope.getTrash = function()
       {
+
+      $rootScope.getOptions();
       $scope.trashInfo= {};
       $scope.trashInfo.roundId = $scope.roundId;
       console.log($scope.trashInfo);
@@ -409,12 +415,65 @@ md-input-container {
 
  			}
  	}
-$rootScope.refresh = function()
-{
-           $rootScope.getPending();
-            $rootScope.getHistory();
-            $rootScope.getTrash();
-}
+
+
+    $rootScope.getOptions = function()
+      {
+        if($scope.districtsForDisplay==null)
+    {
+      $http.post('../UtilityFiles/GetOptions.php',$scope.data).then
+      (
+      function(response)
+      {
+      $scope.districtsForDisplay = response.data;
+      $scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisplay[0];
+      }
+
+      );
+    }
+      else
+      {
+      $scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisplay[0];
+      }
+    }
+
+  $rootScope.getContacts = function()
+      { 
+
+      $http.post('../UtilityFiles/GetOptionContacts.php',$scope.data).then
+      (
+      function(response)
+      {
+      $scope.districtsForDisplayContacts = response.data;
+      $scope.districtsForDisplayContacts.districtsForDisplaySelected = $scope.districtsForDisplayContacts[0];
+      }
+      );
+
+      $http.post('../UtilityFiles/contacts.php').then
+      (
+      function(response) 
+      {
+         if(response.data.login==0)
+        {
+        $window.alert("Please Login");
+        $window.location.href = '../Face/login.php';
+        }
+        else
+        {
+        $scope.contacts = (response.data);
+        $scope.contactsBackup = (response.data);    
+        }
+      }
+      
+      );
+      }
+
+// $rootScope.refresh = function()
+// {
+//            $rootScope.getPending();
+//             $rootScope.getHistory();
+//             $rootScope.getTrash();
+// }
 
 $scope.getRounds = function()
 {
@@ -445,12 +504,18 @@ $scope.getRounds = function()
           }
    
         });
+              $rootScope.getContacts();
+        }
+
+        $rootScope.gotRound =true;
+        if($rootScope.gotRound)
+        {
             $rootScope.getPending();
             $rootScope.getHistory();
             $rootScope.getTrash();
-        }  
-      }
+        }
 
+      }
       );
 }
 
@@ -646,17 +711,11 @@ $scope.getRounds();
       $scope.buttonValue = ""; 
       $scope.received = "";
       
-
+      if($rootScope.gotRound)
+      $rootScope.getHistory();
       
       
-      $http.post('../UtilityFiles/GetOptions.php',$scope.data).then
-      (
-      function(response)
-      {
-      $scope.districtsForDisplay = response.data;
-      $scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisplay[0];
-      }
-      );
+      
       
    
 
@@ -776,17 +835,9 @@ $scope.getRounds();
       app.controller('pendingControl', function($scope,$http,$mdDialog,$route,$window,$rootScope) {
 
 
-      
-      
-      $http.post('../UtilityFiles/GetOptions.php',$scope.data).then
-      (
-      function(response)
-      {
-      $scope.districtsForDisplay = response.data;
-      $scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisplay[0];
-      }
-      );
-      
+      if($rootScope.gotRound)
+      $rootScope.getPending();      
+
        function DialogController($scope, $mdDialog,$route) {
           $scope.hide = function() {
             $mdDialog.hide();
@@ -818,7 +869,7 @@ $scope.getRounds();
       		{
       			if(response.data.trashed==1)
       			{
-      			   $rootScope.refresh();
+      			  $route.reload();
       			}
       			else
       			{
@@ -905,34 +956,9 @@ $scope.getRounds();
       
       
       app.controller('contactsControl', function($scope,$http,$mdDialog,$route,$window) {
-       
-      $http.post('../UtilityFiles/contacts.php').then
-      (
-      function(response) 
-      {
-         if(response.data.login==0)
-        {
-        $window.alert("Please Login");
-        $window.location.href = '../Face/login.php';
-        }
-        else
-        {
-        $scope.contacts = (response.data);
-        $scope.contactsBackup = (response.data);    
-        }
-      }
-      
-      );
       
       
-      $http.post('../UtilityFiles/GetOptionContacts.php',$scope.data).then
-      (
-      function(response)
-      {
-      $scope.districtsForDisplay = response.data;
-      $scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisplay[0];
-      }
-      );
+      
       
        function DialogController($scope, $mdDialog,$route) {
           $scope.hide = function() {
@@ -956,7 +982,7 @@ $scope.getRounds();
       $scope.found = false;
       $scope.contacts = [];
       //$scope.contacts.push($scope.contactsBackup[0]);
-        if($scope.districtsForDisplay.districtsForDisplaySelected.districtId == 99)
+        if($scope.districtsForDisplayContacts.districtsForDisplaySelected.districtId == 99)
         {
           $scope.found = true;
           $scope.contacts = $scope.contactsBackup;
@@ -965,7 +991,7 @@ $scope.getRounds();
         {
            angular.forEach($scope.contactsBackup, function(value, key)
           {
-          if($scope.contactsBackup[key].districtName == $scope.districtsForDisplay.districtsForDisplaySelected.district)
+          if($scope.contactsBackup[key].districtName == $scope.districtsForDisplayContacts.districtsForDisplaySelected.district)
           {
             $scope.found = true;    
             $scope.contacts.push($scope.contactsBackup[key]);
@@ -995,17 +1021,12 @@ $scope.getRounds();
 
 
       app.controller('trashControl', function($scope,$http,$mdDialog,$route,$window,$rootScope) {
-       
-
      
-      $http.post('../UtilityFiles/GetOptions.php',$scope.data).then
-      (
-      function(response)
-      {
-      $scope.districtsForDisplay = response.data;
-      $scope.districtsForDisplay.districtsForDisplaySelected = $scope.districtsForDisplay[0];
-      }
-      );
+
+      if($rootScope.gotRound)  
+      $rootScope.getTrash();
+     
+      
       
        function DialogController($scope, $mdDialog,$route) {
           $scope.hide = function() {
@@ -1038,7 +1059,7 @@ $scope.getRounds();
           {
             if(response.data.trashed==1)
             {
-              $rootScope.refresh();
+              $route.reload();
             }
             else
             {
