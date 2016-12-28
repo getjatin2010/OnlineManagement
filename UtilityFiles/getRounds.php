@@ -24,12 +24,17 @@ function getRounds()
 	include "../DatabaseConnection/config.php";
 	$sql = "SELECT * FROM  `Rounds`";
 	$return_arr = array();
-	
+	$today_date = date('Y-m-d');
 	$fetch = mysqli_query($conn,$sql); 
 	while ($row = $fetch->fetch_assoc()) {			
 		$row_array['roundId'] = $row['roundId'];
 		$row_array['from'] = $row['from'];
 		$row_array['to'] = $row['to'];
+		if(strtotime($row_array['from']) <= strtotime($today_date) && (  $row_array['to']==NULL ||   strtotime($row_array['to']) >= strtotime($today_date)  ) )
+			$row_array['defaultRound'] = '1';
+		else
+			$row_array['defaultRound'] = '0';
+			
 		array_push($return_arr,$row_array);
 }
 	mysqli_close($conn);

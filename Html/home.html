@@ -378,16 +378,20 @@ md-input-container {
  		var absUrl = $location.absUrl();
  		$scope.roundId = $scope.roundSelected.roundId;
     	$scope.min_date_round = new Date($scope.roundSelected.from);
-      $scope.roundSelected.from = $scope.formatDate($scope.roundSelected.from);
       if( $scope.roundSelected.to == null)
       {
         $scope.startingString = $scope.roundSelected.from + " onwards";
         $scope.max_date_round = new Date(); 
+
+        $scope.max_date_round = new Date(
+            $scope.max_date_round.getFullYear(),
+            $scope.max_date_round.getMonth() + 1,
+            $scope.max_date_round.getDate());
       }
       else	
  		   {
         $scope.max_date_round = new Date($scope.roundSelected.to);
-        $scope.roundSelected.to = $scope.formatDate($scope.roundSelected.to);
+        
         $scope.startingString  = $scope.roundSelected.from +" - " + $scope.roundSelected.to;
        }
      		if(absUrl.indexOf('pending') !== -1)
@@ -490,18 +494,40 @@ $scope.getRounds = function()
       else
         {
              $scope.roundData = response.data;
-              angular.forEach($scope.roundData, function(value, key){
-        	 if($scope.roundData[key].to == null)
-        	{
-            $scope.roundSelected = $scope.roundData[key];
 
-        		$scope.roundId = $scope.roundData[key].roundId;
-        		$scope.from = $scope.roundData[key].from;
-            $scope.roundSelected.from = $scope.formatDate($scope.roundSelected.from);
-            $scope.startingString = $scope.roundSelected.from+ " onwards";   
- 				    $scope.min_date_round = new Date($scope.from);
-            $scope.max_date_round = new Date();
-          }
+              angular.forEach($scope.roundData, function(value, key){
+
+
+      		$scope.roundData[key].from = $scope.formatDate($scope.roundData[key].from);
+        	if($scope.roundData[key].to != null)
+        	$scope.roundData[key].to = $scope.formatDate($scope.roundData[key].to);
+
+
+        	 if($scope.roundData[key].defaultRound == 1)
+        	{
+
+      $scope.roundSelected = $scope.roundData[key];
+      $scope.roundId = $scope.roundSelected.roundId;
+      $scope.min_date_round = new Date($scope.roundSelected.from);
+      $scope.from = $scope.roundSelected.from;
+      if( $scope.roundSelected.to == null)
+      {
+        $scope.startingString = $scope.roundSelected.from + " onwards";
+        $scope.max_date_round = new Date(); 
+
+
+        $scope.max_date_round = new Date(
+            $scope.max_date_round.getFullYear(),
+            $scope.max_date_round.getMonth() + 1,
+            $scope.max_date_round.getDate());
+      }
+      else  
+       {
+        $scope.max_date_round = new Date($scope.roundSelected.to);
+
+        $scope.startingString  = $scope.roundSelected.from +" - " + $scope.roundSelected.to;
+       }
+         }
    
         });
               $rootScope.getContacts();
@@ -586,10 +612,7 @@ $scope.getRounds();
             $scope.myDate.getMonth() - 2,
             $scope.myDate.getDate());
       
-      $scope.maxDate = new Date(
-            $scope.myDate.getFullYear(),
-            $scope.myDate.getMonth() + 2,
-            $scope.myDate.getDate());
+
       
       $scope.data = {};
       $scope.error = "";
